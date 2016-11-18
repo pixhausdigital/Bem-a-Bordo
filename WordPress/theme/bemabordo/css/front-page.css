@@ -1,7 +1,7 @@
 /* CSS Document */
 body{
-	background-image: url(../image/Louisbourg_Lighthouse_and_Fortress_1900px.jpg);
-    background-repeat: repeat;
+	background-image: url(../image/farolDOC.png);
+    background-repeat:no-repeat;
      background-position: top center !important;
     background-attachment: fixed !important;
 }
