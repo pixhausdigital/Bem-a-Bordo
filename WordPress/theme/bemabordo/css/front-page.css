@@ -1,8 +1,42 @@
 /* CSS Document */
-body{
-	background-image: url(../image/farolDOC.png);
+#background{
+	background-image: url(../image/farol.png);
     background-repeat:no-repeat;
-     background-position: top center !important;
+    background-position: top center !important;
     background-attachment: fixed !important;
+	height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 118px;
 }
+html, body{
+  height:100%;
+  margin:auto;
+}
+#content{
+	position:absolute;
+	top:118px;
+	width: 100%;	
+}
+#home{
+	font-family: 'PT Sans', sans-serif;
+	font-weight:bold;
+	font-style: italic;
+	font-size:32px;
+	width:80%;
+	height: 395px;
+	margin: 0 auto;
+	position:relative;
+}
+#textLeft{
+	text-align: right;
+    position: absolute;
+    top: 168px;
+    left: 13%;
+}
+#textRigth{
+	text-align: left;
+    position: absolute;
+    top: 168px;
+    right: 10%;
 }

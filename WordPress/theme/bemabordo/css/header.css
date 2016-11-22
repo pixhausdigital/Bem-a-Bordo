@@ -1,0 +1,70 @@
+/* CSS Document*/
+#headerContainer{
+	width:100%;
+	position:fixed;
+	top: 0;
+}
+#headerTop{
+	background-color:#002b40;
+	height: 90px;	/* size of logo image + a few pixels */
+	position:relative;
+	text-align:center;
+}
+#logoContainer{
+	height:87px; /* size of logo image */
+	position:absolute;
+	bottom:-5px;
+}
+.logoSpan{
+	width:115px; /* size of logo image */
+	display:inline-block;
+	text-align:center;
+	padding-top:4px;
+	padding-bottom:4px;
+	font-family: 'Cabin', sans-serif;
+	font-size:17px;
+	font-weight: bold;
+	text-transform:uppercase;
+}
+#headerBottom{
+	background-color:#00c6c6;
+	text-align:center;
+}
+.centerContainer{
+	width:90%;
+	height:100%;
+	display:inline-block;
+	text-align:left;
+}
+#menuContainer{
+	float:right;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size:17px;
+}
+#menuContainer span{
+	margin-left:20px;
+	margin-right:20px;	
+}
+#menuContainer span:last-of-type{
+	margin-right:0px;	/* same as socialContainer*/
+}
+#floatContainer{
+	float:right;
+	height:100%;
+
+}
+#languageContainer,#socialContainer{
+	margin-top: 28px;
+    margin-left: 53px;
+	display:inline-block;
+}
+#socialContainer{
+	margin-right:0px; /* same as #menuContainer span:last-of-type*/
+}
+#socialContainer img{
+	margin-left:10px;
+}
+#languageContainer img{
+	margin-left:10px;
+}
+
