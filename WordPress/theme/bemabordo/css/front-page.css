@@ -3,7 +3,7 @@
 	background-image: url(../image/farol.png);
     background-repeat:no-repeat;
     background-position: top center !important;
-    background-attachment: fixed !important;
+    /*background-attachment: fixed !important; */
 	height: 100%;
     width: 100%;
     position: fixed;
@@ -23,20 +23,113 @@ html, body{
 	font-weight:bold;
 	font-style: italic;
 	font-size:32px;
-	width:80%;
-	height: 395px;
+	width:70%;
+	height: 519px;
 	margin: 0 auto;
 	position:relative;
+	text-align:center;
 }
-#textLeft{
-	text-align: right;
-    position: absolute;
-    top: 168px;
-    left: 13%;
+#textTopLine{
+	margin-top:20px;
 }
-#textRigth{
-	text-align: left;
-    position: absolute;
-    top: 168px;
-    right: 10%;
+#textBottomLine{
+	margin-top:20px;
+}
+.container{
+	text-align:center;
+	position:relative;
+}
+#aboutUs.container{
+	background-color:#FFFFFF;
+	font-family: 'Libre Franklin', sans-serif;
+	padding-bottom:40px;
+	padding-top:20px;
+}
+.contentContainer{
+	display:inline-block;
+	width:75%;
+}
+.titlePart{
+	font-family: 'Libre Franklin', sans-serif;
+	margin-top:20px;
+	margin-bottom:20px;
+	font-weight: bold;
+	font-size:25px;
+}
+#mission.container{
+	background-image:url(../image/mission.png);
+	background-repeat:no-repeat;
+    background-position: top center !important;
+	height:693px;
+	font-family: 'Libre Franklin', sans-serif;
+}
+#missionText{
+	position:absolute;
+	bottom:60px;
+	margin-left:20px;
+	margin-right:20px;
+	width:73%;
+	color:#FFFFFF;
+	text-align:left;
+}
+#whatWeDo.container{
+	background-color:rgba(0,30,48,0.78);
+	color:rgba(255,255,255,1.00);
+	min-height:870px;
+}
+#whatWeDoFloatersContainer{
+	/*max-width */
+}
+.floater{
+    width: 300px;
+    display: inline-block;
+    margin: 20px;
+	font-family: 'Libre Franklin', sans-serif;
+}
+.floaterTitle{
+	font-size:20px;
+	margin-top:15px;
+	margin-bottom:20px;
+}
+.floaterIcon{
+	height:115px;	
+}
+#whoWeAre.container{
+	background-color:#FFFFFF;
+	font-family: 'Libre Franklin', sans-serif;
+	padding-bottom:40px;
+	padding-top:20px;
+}
+#whoWeAreFloatersContainer{
+	text-align:left;
+}
+.person{
+    display: inline-block;
+    width: 510px;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 15px;
+}
+.personPhoto{
+	display:inline-block;
+	padding-right:10px;	
+}
+.personText{
+	display: inline-block;
+    width: 335px;
+}
+.personSocialContainer{
+	position:absolute;
+	top:0px;
+	right:0px;
+}
+.personName{
+	font-size:22px;	
+}
+.personJob{
+	font-size:12px;
+}
+.personDescription{
+	margin-top:12px;
 }
