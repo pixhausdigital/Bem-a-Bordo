@@ -7,7 +7,7 @@
 	height: 100%;
     width: 100%;
     position: fixed;
-    top: 118px;
+    top: 113px;
 }
 html, body{
   height:100%;
@@ -24,7 +24,7 @@ html, body{
 	font-style: italic;
 	font-size:32px;
 	width:70%;
-	height: 519px;
+	height: 719px;
 	margin: 0 auto;
 	position:relative;
 	text-align:center;
@@ -35,12 +35,25 @@ html, body{
 #textBottomLine{
 	margin-top:20px;
 }
+#welcome{
+	position:absolute;
+	bottom: 20%;	
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size:1.70em;
+	color:rgba(255,255,255,1.00);
+	font-weight:bold;
+	font-style:normal;
+}
 .container{
 	text-align:center;
 	position:relative;
 }
 #aboutUs.container{
-	background-color:#FFFFFF;
+	background-color:rgba(255,255,255,0.81);
 	font-family: 'Libre Franklin', sans-serif;
 	padding-bottom:40px;
 	padding-top:20px;
@@ -73,8 +86,8 @@ html, body{
 	text-align:left;
 }
 #whatWeDo.container{
-	background-color:rgba(0,30,48,0.78);
-	color:rgba(255,255,255,1.00);
+	background-color:rgba(255,255,255,0.78);
+	
 	min-height:870px;
 }
 #whatWeDoFloatersContainer{
@@ -85,10 +98,13 @@ html, body{
     display: inline-block;
     margin: 20px;
 	font-family: 'Libre Franklin', sans-serif;
+	 vertical-align:top;
 }
 .floaterTitle{
 	font-size:20px;
+	font-weight:bold;
 	margin-top:15px;
+	color:#004c7a;
 	margin-bottom:20px;
 }
 .floaterIcon{
@@ -103,6 +119,7 @@ html, body{
 #whoWeAreFloatersContainer{
 	text-align:left;
 }
+
 .person{
     display: inline-block;
     width: 510px;
@@ -110,20 +127,26 @@ html, body{
     padding-top: 20px;
     padding-bottom: 20px;
     margin-right: 15px;
+	vertical-align:top;
 }
+
 .personPhoto{
 	display:inline-block;
 	padding-right:10px;	
 }
+
 .personText{
 	display: inline-block;
-    width: 335px;
+    width: 320px;
 }
-.personSocialContainer{
-	position:absolute;
-	top:0px;
-	right:0px;
+
+.personSocialContainer a{
+	margin:5px;
 }
+.personSocialContainer a:first-of-type{
+	margin-left:0px;	
+}
+/**/
 .personName{
 	font-size:22px;	
 }
@@ -132,4 +155,8 @@ html, body{
 }
 .personDescription{
 	margin-top:12px;
+}
+
+#news.container{
+	background-color:rgba(221,221,221,1);	
 }

@@ -1,4 +1,8 @@
 /* CSS Document*/
+html, body{
+  height:100%;
+  margin:auto;
+}
 #headerContainer{
 	width:100%;
 	position:fixed;
@@ -6,15 +10,15 @@
 	z-index:100;
 }
 #headerTop{
-	background-color:#002b40;
+	background-color:#d4e7e6;
 	height: 90px;	/* size of logo image + a few pixels */
 	position:relative;
 	text-align:center;
 }
 #logoContainer{
-	height:87px; /* size of logo image */
+	height: 193px; /* size of logo image */
 	position:absolute;
-	bottom:-5px;
+	top:-21px;
 }
 .logoSpan{
 	width:115px; /* size of logo image */
@@ -22,13 +26,11 @@
 	text-align:center;
 	padding-top:4px;
 	padding-bottom:4px;
-	font-family: 'Cabin', sans-serif;
-	font-size:17px;
-	font-weight: bold;
-	text-transform:uppercase;
+}
+#nameContainer{color:#004c7a;
 }
 #headerBottom{
-	background-color:#00c6c6;
+		background-color:#d4e7e6;
 	text-align:center;
 }
 .centerContainer{
@@ -40,7 +42,8 @@
 #menuContainer{
 	float:right;
 	font-family: 'Libre Franklin', sans-serif;
-	font-size:17px;
+	font-size:0.96em;
+	color:#0085a6;
 }
 #menuContainer span{
 	margin-left:20px;

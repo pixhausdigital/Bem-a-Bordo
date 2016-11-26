@@ -17,7 +17,7 @@ include_once ("include/lang_detect.php");
 <header>
 <div id="headerTop">
 <span class="centerContainer">
-<span id="logoContainer" class="logoSpan"><img src="<?php bloginfo('template_directory');?>/image/logo.png" width="115" height="87" alt=""/></span>
+<span id="logoContainer" class="logoSpan"><img src="<?php bloginfo('template_directory');?>/image/logo_ball.png" width="193" height="193" alt=""/></span>
 <span id="floatContainer">
 <span id="languageContainer">
 <span id="ptContainer"><img src="<?php bloginfo('template_directory');?>/image/pt_active.png" width="33" height="33" alt=""/></span>
@@ -32,7 +32,7 @@ include_once ("include/lang_detect.php");
 </div>
 <div id="headerBottom">
 <span class="centerContainer">
-<span id="nameContainer"  class="logoSpan">Bem a Bordo</span>
+
 <span id="menuContainer">
 <span id="aboutUs">Sobre nós</span>
 <span id="mission">Nossa Missão</span>
