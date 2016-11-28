@@ -1,4 +1,5 @@
 <?php
+global $lang;
  if(function_exists('pll_current_language')) {
 	//var_dump(pll_current_language());
 	$lang=pll_current_language();

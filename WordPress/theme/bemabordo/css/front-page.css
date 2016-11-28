@@ -1,6 +1,6 @@
 /* CSS Document */
 #background{
-	background-image: url(../image/farol.png);
+	background-image: url(../image/cenario+deck.png);
     background-repeat:no-repeat;
     background-position: top center !important;
     /*background-attachment: fixed !important; */
@@ -70,10 +70,10 @@ html, body{
 	font-size:25px;
 }
 #mission.container{
-	background-image:url(../image/mission.png);
+	background-image:url(../image/ushuaia.png);
 	background-repeat:no-repeat;
     background-position: top center !important;
-	height:693px;
+	height:550px;
 	font-family: 'Libre Franklin', sans-serif;
 }
 #missionText{

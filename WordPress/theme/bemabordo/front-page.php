@@ -84,7 +84,7 @@ include_once ("include/lang_detect.php");
         
         	<div id="whoWeAreFloatersContainer">
         		<?php if(function_exists('BABP_getPeople')){
-					BABP_getPeople();
+					BABP_getPeople($lang);
 }
 ?>        	</div>
     </div>
