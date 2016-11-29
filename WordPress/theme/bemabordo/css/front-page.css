@@ -76,6 +76,9 @@ html, body{
 	height:550px;
 	font-family: 'Libre Franklin', sans-serif;
 }
+#missionTitle{
+	color:rgba(255,255,255,1.00);	
+}
 #missionText{
 	position:absolute;
 	bottom:60px;
@@ -89,6 +92,9 @@ html, body{
 	background-color:rgba(255,255,255,0.78);
 	
 	min-height:870px;
+}
+#whatWeDoTitle{
+	color:#004c7a;
 }
 #whatWeDoFloatersContainer{
 	/*max-width */
@@ -111,10 +117,13 @@ html, body{
 	height:115px;	
 }
 #whoWeAre.container{
-	background-color:#FFFFFF;
+	background-color:#e6e8e1;
 	font-family: 'Libre Franklin', sans-serif;
 	padding-bottom:40px;
 	padding-top:20px;
+}
+#whoWeAreTitle{
+	color:#666666;
 }
 #whoWeAreFloatersContainer{
 	text-align:left;
@@ -158,5 +167,21 @@ html, body{
 }
 
 #news.container{
-	background-color:rgba(221,221,221,1);	
+	background-color:#ffffff;	
+}
+.newsFloaterContainer{
+    max-width: 340px;
+    display: inline-block;
+    vertical-align: top;
+	text-align:left;	
+}
+.newsText{
+	margin-top:20px;
+}
+#allNewsLink{
+	margin:30px;
+}
+
+#contact.container{
+	background-color:#e5e5e5;	
 }

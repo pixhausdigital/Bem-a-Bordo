@@ -19,6 +19,7 @@ function BABP_install() {
 
 	$sql = "CREATE TABLE $table_name (
 		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		manual mediumint(9) NOT NULL,
 		time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 		name tinytext NOT NULL,
 		job tinytext NOT NULL,
@@ -55,6 +56,7 @@ function BABP_install_data() {
 		$table_name, 
 		array( 
 			'time' => current_time( 'mysql' ), 
+			'manual' => "0", 
 			'name' => $welcome_name, 
 			'job' => $welcome_job, 
 			'job_en' => $welcome_job, 
@@ -563,6 +565,7 @@ if($_REQUEST["action"] == "edit" || $_REQUEST["action"] == "add"){
 		$people = $wpdb->get_results( 'SELECT * FROM '.$table_name." WHERE id='".$_REQUEST["id"]."'");
 		foreach($people as $person){
 			$id=$person->id;
+			$manual=$person->manual;
 			$name=$person->name;
 			$job=$person->job;
 			$text=$person->text;
@@ -577,6 +580,10 @@ if($_REQUEST["action"] == "edit" || $_REQUEST["action"] == "add"){
 			//var_dump($attachment);
 			//var_dump(site_url().$image);
 		}
+	}else{
+		$table_name = $wpdb->prefix . 'BABP';
+		$count_query = "select count(*) from $table_name";
+    	$manual = $wpdb->get_var($count_query)+1;
 	}
 	
 	//var_dump();
@@ -584,7 +591,9 @@ if($_REQUEST["action"] == "edit" || $_REQUEST["action"] == "add"){
 	
 	echo "<h2>" . __( 'Add Person', 'menu-test' ) . "</h2>";
 	 if ( $_SERVER["REQUEST_METHOD"] == "POST" ){
-            print "do stuff";
+           echo $_POST["name"]." Added <br>";
+		   echo '<a href="?page='.$_REQUEST['page'].'&action=add" class="page-title-action">Add New</a> <br>';
+		   echo '<a href="?page='.$_REQUEST['page'].'" class="page-title-action">Go Back</a>';
 			
 			if($_POST["image"] == ""){
 				$image = plugins_url('person.png', __FILE__);
@@ -599,7 +608,8 @@ if($_REQUEST["action"] == "edit" || $_REQUEST["action"] == "add"){
 				$table_name, 
 				array( 
 					'time' => current_time( 'mysql' ), 
-					'id' => $_POST["id"], 
+					'id' => $_POST["id"],
+					'manual' => $_POST["manual"], 
 					'name' => $_POST["name"], 
 					'job' => $_POST["job"], 
 					'job_en' => $_POST["job_en"],
@@ -615,6 +625,7 @@ if($_REQUEST["action"] == "edit" || $_REQUEST["action"] == "add"){
 		?>
 		<form method="post" action='<?php echo $_SERVER['REQUEST_URI'] ?>' enctype="multipart/form-data">
         <input type='hidden' name='id' value='<?php if(isset($id)){echo $id;} ?>'>
+        <input type='hidden' name='manual' value='<?php if(isset($manual)){echo $manual;} ?>'>
          <label for="image">Image:</label>
 		<div class='image-preview-wrapper'>
 			<img id='image-preview' src='<?php if(isset($image)){ echo site_url().$image; } else{ echo plugins_url('person.png', __FILE__); } ?>' height='100'>
@@ -719,41 +730,130 @@ function mt_sublevel_page() {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
     global $wpdb;
-	
 	echo '<link rel="stylesheet" type="text/css" href="'.plugins_url('BABP.css', __FILE__).'">';
 	echo "<h2>" . __( 'Options', 'menu-test' ) . "</h2>";
-	$sortBy = get_option( 'BABP_sortBy');
-	$sortDirection = get_option( 'BABP_sortDirection');
-	
-	var_dump($sortDirection);
-	var_dump($sortBy);
 	
 	if($_SERVER["REQUEST_METHOD"] == "POST" ){
 		
-		
-	}else{
+		//var_dump($_POST);
+		update_option('BABP_sortBy', $_POST["sortBy"]);
+		update_option('BABP_sortDirection', $_POST["sortDirection"]);
+		if($_POST["sortBy"] == "manual"){
+			$sortString= str_replace ("sort=", "",$_POST["sortArray"]);
+			$sortArray= explode('&', $sortString);
+			$manualSort=array();
+			foreach($sortArray as $id => $manual){
+					$manualSort[$id]=$manual;
+			}
+			foreach($manualSort as $manual => $id){
+				$table_name = $wpdb->prefix . 'BABP';
+				$wpdb->update( 
+					$table_name, 
+					array(
+						'manual' => $manual
+					), array( 
+						'id' => $id
+					)
+				);
+				
+			}
+			//var_dump($manualSort);
+		}
+	}
+
+	$sortBy = get_option( 'BABP_sortBy');
+	$sortDirection = get_option( 'BABP_sortDirection');
+	
 		echo '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>';
-		echo'<script src="'.plugins_url('options.js', __FILE__).'"></script>';
+		echo'<script type="text/javascript">
+		jQuery( document ).ready( function( $ ) {
+			if($("#sortBy").val() == "manual"){
+				$("#manualSelect").show();
+				$("#orderPreview").hide();	
+			}else{
+				$("#manualSelect").hide();
+				$("#orderPreview").show()
+			}
+			
+			$("#previewButton").click(function(e) {
+			   var data = $( "form" ).serialize();
+			   $.post({url: "'.plugins_url('peoplePreview.php', __FILE__).'", data , success: function(result){
+    		   	 $("#orderPreview").html(result);
+    			}});
+				
+			});
+			$( ".sortable" ).sortable({
+     			 placeholder: "ui-state-highlight"
+   			});
+			$("#submitButton").click(function(e) {
+				var sorted = $( ".sortable" ).sortable( "serialize", { key: "sort" } );
+				$("#manualOrder").val(sorted);
+				$( "#optionsForm" ).submit();
+			});
+			$("#sortBy").change(function(e){
+				$("#previewButton").click();
+				if( $(this).val() == "manual"){
+					$("#manualSelect").show();
+					$("#orderPreview").hide();
+					
+				
+				}else{
+					$("#manualSelect").hide();
+					$("#orderPreview").show();
+				}
+			});
+			
+			$("#sortDirection").change(function(e){
+				$("#previewButton").click();
+			});
+		});
+		</script>';
 		?>
-		 <form method="post" action='<?php echo $_SERVER['REQUEST_URI'] ?>' enctype="multipart/form-data">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+		 <form id="optionsForm" method="post" action='<?php echo $_SERVER['REQUEST_URI'] ?>' enctype="multipart/form-data">
         	<label for="sortBy">Sort by:</label>
-            <select name="sortBy">
-            	<option value="id">Published Order</option>
-                <option value="alphabetical">Alphabetical</option>
-                <option value="custom">Manual</option>
+            <select id="sortBy" name="sortBy">
+            	<option value="id" <?php if($sortBy == "id"){ echo "selected";} ?>>Published Order</option>
+                <option value="name" <?php if($sortBy == "name"){ echo "selected";} ?>>Alphabetical Name</option>
+                <option value="job" <?php if($sortBy == "job"){ echo "selected";} ?>>Alphabetical Job</option>
+                <option value="manual" <?php if($sortBy == "manual"){ echo "selected";} ?>>Manual</option>
             </select>
             <select name="sortDirection">
-            	<option value="ASC">Ascending</option>
-                <option value="DESC">Descending</option>
+            	<option value="ASC" <?php if($sortDirection == "ASC"){ echo "selected";} ?>>Ascending</option>
+                <option value="DESC" <?php if($sortDirection == "DESC"){ echo "selected";} ?>>Descending</option>
             </select>
             <button type="button" id="previewButton" name="preview">Preview</button>
+            <button type="submit" id="submitButton" name="submit">Save</button>
+            <input type="hidden" name="sortArray" id="manualOrder" />
         </form>
-        
-        <div id="orderPreview">
-        	
+        <br><br>
+        <div id="orderPreview" class="float">
+        	<span class="partTitle">Order Preview:</span>
+        	<?php
+			global $wpdb;
+				$table_name = $wpdb->prefix . 'BABP';
+				$people = $wpdb->get_results( 'SELECT * FROM '.$table_name.' ORDER BY `'.$table_name.'`.`'.$sortBy.'` '.$sortDirection.'');
+//var_dump($_POST);
+			foreach($people as $person){
+				echo '<div class="personPreview">'.$person->name.' '.$person->job.'</div>';
+			}
+			?>
 		</div>
+        <div id="manualSelect" class="float">
+        <span class="partTitle">Manual Order (click and drag to reoder)</span>
+        <ul class="sortable">
+        <?php
+		$table_name = $wpdb->prefix . 'BABP';
+				$people = $wpdb->get_results( 'SELECT * FROM '.$table_name.' ORDER BY `'.$table_name.'`.`manual` '.$sortDirection.'');
+		foreach($people as $person){
+				echo '<li id="id_'.$person->id.'" class="personPreview">'.$person->name.' - '.$person->job.'</li>';
+			}
+		?>
+        </ul>
+        </div>
 		<?php	
-	}
+	
 	
 }
 
@@ -824,9 +924,10 @@ register_activation_hook( __FILE__, 'BABP_install_data' );
 
 function BABP_getPeople($lang){
 	global $wpdb;
-	
+	$sortBy = get_option( 'BABP_sortBy');
+	$sortDirection = get_option( 'BABP_sortDirection');
 	$table_name = $wpdb->prefix . 'BABP';
-	$people = $wpdb->get_results( 'SELECT * FROM '.$table_name);
+	$people = $wpdb->get_results( 'SELECT * FROM '.$table_name.' ORDER BY `'.$table_name.'`.`'.$sortBy.'` '.$sortDirection.'');
 	
 	foreach($people as $person){?>
 		

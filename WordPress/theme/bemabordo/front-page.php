@@ -101,9 +101,10 @@ include_once ("include/lang_detect.php");
 $newsWithImages=array();
 $newsNoImages=array();
 
-$args = array( 'posts_per_page' => 6 );
+$args = array( 'posts_per_page' => 3 );
 
 $myposts = get_posts( $args );
+$path= get_bloginfo('template_directory');
 foreach ( $myposts as $post ) : setup_postdata( $post ); 
 	//var_dump($post);
 	$apost=array();
@@ -113,11 +114,14 @@ foreach ( $myposts as $post ) : setup_postdata( $post );
 	$apost["date"]=get_the_date("d/m/Y");
 	if ( has_post_thumbnail() ) {
 		$apost["image"] = get_the_post_thumbnail();
-		$newsWithImages[]=$apost;
+		
 		//the_post_thumbnail();
 	}else{
-		$newsNoImages[]=$apost;
+		//var_dump(bloginfo('template_directory'));
+		$apost["image"] = '<img width="302" height="164" src="'.$path.'/image/mininews.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="mininews"/>';
+		//$newsNoImages[]=$apost;
 	}
+	$newsWithImages[]=$apost;
 	?>
 	
 <?php endforeach; 
@@ -152,6 +156,15 @@ wp_reset_postdata();
         
         <div id="allNewsLink"><a href="">Clique aqui</a> para ir para a página de atualidades</div>
     </div>
+</div>
+
+<div id="contact" class="container"> 
+	<div id="contactContentContainer" class="contentContainer">
+    	<div id="contactTitle" class="titlePart">Contato</div>
+        
+        
+
+	</div>
 </div>
 
 
