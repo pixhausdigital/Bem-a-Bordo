@@ -34,12 +34,13 @@ include_once ("include/lang_detect.php");
 <span class="centerContainer">
 
 <span id="menuContainer">
-<span id="aboutUs">Sobre nós</span>
-<span id="mission">Nossa Missão</span>
-<span id="whoWeAre">Quem Somos</span>
-<span id="whatWeDo">O que fazemos</span>
-<span id="news">Atualidades</span>
-<span id="contact">Contato</span>
+<span id="homeMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/">'; } echo_static_text("homeMenu");   if(!is_front_page()){ echo '</a>';}?></span>
+<span id="aboutUsMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#aboutUs">'; } echo_static_text("aboutUsMenu");   if(!is_front_page()){ echo '</a>';}?></span>
+<span id="missionMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#mission">'; } echo_static_text("missionMenu");   if(!is_front_page()){ echo '</a>';} ?></span>
+<span id="whoWeAreMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#whoWeAre">'; } echo_static_text("whoWeAreMenu");   if(!is_front_page()){ echo '</a>';} ?></span>
+<span id="whatWeDoMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#whatWeDo">'; } echo_static_text("whatWeDoMenu");   if(!is_front_page()){ echo '</a>';} ?></span>
+<span id="newsMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#news">'; } echo_static_text("newsMenu");   if(!is_front_page()){ echo '</a>';} ?></span>
+<span id="contactMenu"><?php if(!is_front_page()){ echo '<a href="'.get_site_url().'/#contact">'; } echo_static_text("contactMenu");   if(!is_front_page()){ echo '</a>';} ?></span>
 </span>
 </span>
 </div>

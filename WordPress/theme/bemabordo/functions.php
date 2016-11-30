@@ -22,7 +22,7 @@ function BAB_setup_options () {
   		`text_en` text NOT NULL,
   		`text_pt` text NOT NULL,
   		`time` datetime NOT NULL,
-  		`parent` varchar(90) NOT NULL,
+  		`container` varchar(90) NOT NULL,
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 	
@@ -80,9 +80,7 @@ function setup_BAB_theme_admin_menus() {
 }
 add_action("admin_menu", "setup_BAB_theme_admin_menus");
 
-function bab_toplevel_page() {
-	echo "page";
-}
+include ("include/admin/pages/menupages.php");
 
 
 function echo_static_text($textName){
