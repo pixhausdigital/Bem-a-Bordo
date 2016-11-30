@@ -8,7 +8,7 @@ include_once ("include/lang_detect.php");
 	<div id="textTopLine"><?php echo_static_text("textTopLine") ?></div>
     <div id="textBottomLine"><?php echo_static_text("textBottomLine") ?></div>
     
-    <div id="welcome">Bem Vindo a Bordo!</div>
+    <div id="welcome"><?php echo_static_text("welcome") ?></div>
 </div>
 <div id="aboutUs" class="container">
 	<div id="aboutUsContentContainer" class="contentContainer">
@@ -92,7 +92,7 @@ include_once ("include/lang_detect.php");
 
 <div id="news" class="container">
 	<div id="newsContentContainer" class="contentContainer">
-    	<div id="newsTitle" class="titlePart">Atualidades</div>
+    	<div id="newsTitle" class="titlePart"><?php echo_static_text("newsTitle") ?></div>
 		
         
         
@@ -154,13 +154,13 @@ wp_reset_postdata();
         
         </div>
         
-        <div id="allNewsLink"><a href="">Clique aqui</a> para ir para a página de atualidades</div>
+        <div id="allNewsLink"><a id="clickHere" href="<?php if($lang == "pt"){ echo "noticias"; } else{ echo "en/news";}?>"><?php echo_static_text("clickHere") ?></a> <?php echo_static_text("allNewsLink") ?></div>
     </div>
 </div>
 
 <div id="contact" class="container"> 
 	<div id="contactContentContainer" class="contentContainer">
-    	<div id="contactTitle" class="titlePart">Contato</div>
+    	<div id="contactTitle" class="titlePart"><?php echo_static_text("contactTitle") ?></div>
         
         
 
