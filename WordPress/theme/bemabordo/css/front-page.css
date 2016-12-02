@@ -183,5 +183,86 @@ html, body{
 }
 
 #contact.container{
-	background-color:#e5e5e5;	
+	background-color:#e5e5e5;
+	text-align:center;
+	color:#002b40;
+	padding-bottom:1em;
+}
+#contactSubTitle{
+	font-size:1.2em;
+	margin:1em;
+}
+#contactInformation{
+	font-size:1em;
+	margin-bottom: 2em;
+	margin-top: 0em;
+	margin:1em;
+}
+#contactInformation a{
+	color:#002b40;
+}
+#contactInfoForm{
+	font-size:1em;
+	margin:1em;	
+}
+#contactInfoForm a{
+	color:#002b40;
+}
+#mailForm{
+	max-width:80%;
+	margin: 0px auto;
+}
+#mailForm input,textarea,button{
+	border-radius:5px;
+	border-color:transparent;
+	padding:1em;
+}
+#mailForm ::-webkit-input-placeholder {
+   color: black;
+}
+
+#mailForm :-moz-placeholder { /* Firefox 18- */
+   color: black;
+}
+
+#mailForm ::-moz-placeholder {  /* Firefox 19+ */
+   color: black; 
+}
+
+#mailForm :-ms-input-placeholder {  
+   color: black; 
+}
+#messageContainer{
+	margin-top:1em;
+}
+
+.field{
+	width:32.3%;
+	display:inline-block;
+	margin-bottom:1em;	
+}
+.field input{
+	width:88%;
+}
+#message textarea{
+	width:94%;
+	height:10em;
+}
+#message{
+	width:100%;
+	margin-top:1em;
+	display:inline-block;
+}
+span.clear { clear: left; display: block; }
+#formLastLine{
+	overflow: hidden;
+	max-width: 96%;
+    margin: auto;
+	padding-top:2em;
+}
+#submitButton{
+	background-color:#00a5ce;
+	color:#ffffff;
+	width: 15em;
+    margin-top: -1em;
 }

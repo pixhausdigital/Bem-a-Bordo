@@ -325,9 +325,79 @@ $wpdb->insert(
 	$table_name, 
 	array( 
 		'time' => current_time( 'mysql' ), 
-		'id' => "contactTextTopLine", 
+		'id' => "contact_subtitle", 
 		'text_en' => "", 
-		'text_pt' => "", 
+		'text_pt' => "Lorem ipsum dolor sit amet, consetetur sadipscing elitr", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_information", 
+		'text_en' => "", 
+		'text_pt' => "Lorem ipsum dolor sit amet, consetetur sadipscing elitrLorem ipsum dolor sit amet, consetetur sadipscing elitr.", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_namePlaceholder", 
+		'text_en' => "", 
+		'text_pt' => "Nome", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_emailPlaceholder", 
+		'text_en' => "", 
+		'text_pt' => "Email", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_subjectPlaceholder", 
+		'text_en' => "", 
+		'text_pt' => "Assunto", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_messagePlaceholder", 
+		'text_en' => "", 
+		'text_pt' => "Mensagem", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_submitButton", 
+		'text_en' => "", 
+		'text_pt' => "Enviar", 
+		'container' => "7_contact"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "contact_form_information", 
+		'text_en' => "", 
+		'text_pt' => "Ou se preferir envie um e-mail para contato@bemabordo.com.br.", 
 		'container' => "7_contact"
 	) 
 );
