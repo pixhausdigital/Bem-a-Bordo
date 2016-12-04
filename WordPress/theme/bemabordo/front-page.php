@@ -2,13 +2,38 @@
 include_once ("include/lang_detect.php");
 ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/front-page.css">
-<div id="background"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/js/assets/owl.carousel.css">
+<script src="<?php bloginfo('template_directory');?>/js/owl.carousel.js"></script>
+<script src="<?php bloginfo('template_directory');?>/js/front-page.js"></script>
+<!-- <div id="background"></div> !-->
 <div id="content">
+
+
 <div id="home" class="container">
-	<div id="textTopLine"><?php echo_static_text("textTopLine") ?></div>
+
+	<div id="carousel">
+        <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel0.jpg" width="1067" height="600" alt=""/>
+        <div class="imageText">
+        <div id="textTopLine"><?php echo_static_text("textTopLine") ?></div>
     <div id="textBottomLine"><?php echo_static_text("textBottomLine") ?></div>
     
     <div id="welcome"><?php echo_static_text("welcome") ?></div>
+    </div>
+        </div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel1.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel2.jpg" width="859" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel3.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel4.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel5.jpg" width="899" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel6.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel7.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel8.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel9.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel10.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel11.jpg" width="900" height="600" alt=""/></div>
+  <div class="carouselImageContainer"><img src="<?php echo get_bloginfo('template_directory'); ?>/image/carousel12.jpg" width="900" height="600" alt=""/></div>
+	</div>
 </div>
 <div id="aboutUs" class="container">
 	<div id="aboutUsContentContainer" class="contentContainer">
