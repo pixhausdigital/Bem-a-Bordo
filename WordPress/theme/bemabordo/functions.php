@@ -31,6 +31,10 @@ function BAB_setup_options () {
 
 	update_option ( 'BAB_db_version', $BAB_db_version );
 	
+	update_option ( 'BAB_Carousel_img_1', NULL );
+	update_option ( 'BAB_Carousel_img_2', NULL );
+	update_option ( 'BAB_Carousel_img_3', NULL );
+	
 	BAB_install_data();
 	
 }
@@ -59,6 +63,15 @@ function getStaticTextFromDatabase($id){
 		return ($text["text_".$lang]);
 	}
 	
+}
+
+function getCarrouselImage($id){
+	$imgID= get_option( 'BAB_Carousel_img_'.$id);
+	if($imgID !== "" && $imgID !== NULL){
+		return wp_get_attachment_url($imgID);
+	}else{
+		return get_bloginfo('template_directory')."/image/carousel".($id-1).".jpg";
+	}
 }
 
 
