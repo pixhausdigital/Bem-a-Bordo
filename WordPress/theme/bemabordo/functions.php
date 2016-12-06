@@ -8,8 +8,6 @@ global $BAB_db_version;
 $BAB_db_version = '1.0';
 
 function BAB_setup_options () {
-	//add_option('mytheme_enable_catalog', 0);
-	//add_option('mytheme_enable_features', 0);
 	global $wpdb;
 	global $BAB_db_version;
 
@@ -28,14 +26,41 @@ function BAB_setup_options () {
 	
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );
+	
+	$table_name = $wpdb->prefix . 'BABP';
+	
+	$charset_collate = $wpdb->get_charset_collate();
+
+	$sql = "CREATE TABLE $table_name (
+		id mediumint(9) NOT NULL AUTO_INCREMENT,
+		manual mediumint(9) NOT NULL,
+		time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
+		name tinytext NOT NULL,
+		job tinytext NOT NULL,
+		text_en text NOT NULL,
+		job_en tinytext NOT NULL,
+		text text NOT NULL,
+		facebook varchar(55) DEFAULT '' NOT NULL,
+		linkedin varchar(55) DEFAULT '' NOT NULL,
+		image varchar(500) DEFAULT '' NOT NULL,
+		PRIMARY KEY  (id)
+	) $charset_collate;";
+
+	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+	dbDelta( $sql );
+
+	update_option ( 'BABP_db_version', $BABP_db_version );
+	add_option('BABP_sortBy', 'id');
+	add_option('BABP_sortDirection', 'ASC');
 
 	update_option ( 'BAB_db_version', $BAB_db_version );
 	
-	update_option ( 'BAB_Carousel_img_1', NULL );
-	update_option ( 'BAB_Carousel_img_2', NULL );
-	update_option ( 'BAB_Carousel_img_3', NULL );
+	add_option ( 'BAB_Carousel_img_1', NULL );
+	add_option ( 'BAB_Carousel_img_2', NULL );
+	add_option ( 'BAB_Carousel_img_3', NULL );
 	
 	BAB_install_data();
+	BABP_install_data();
 	
 }
 
@@ -50,6 +75,35 @@ function BAB_install_data() {
 	
 	include_once ("staticTextData.php");
 	
+}
+
+function BABP_install_data() {
+	global $wpdb;
+	
+	$welcome_name = 'Mr. WordPress';
+	$welcome_job = 'a Job Title';
+	$welcome_facebook = 'https://www.facebook.com/';
+	$welcome_linkedin = 'https://www.linkedin.com/';
+	$welcome_text = 'Congratulations, you just completed the installation!';
+	$welcome_image='';
+	
+	$table_name = $wpdb->prefix . 'BABP';
+	
+	$wpdb->insert( 
+		$table_name, 
+		array( 
+			'time' => current_time( 'mysql' ), 
+			'manual' => "0", 
+			'name' => $welcome_name, 
+			'job' => $welcome_job, 
+			'job_en' => $welcome_job, 
+			'facebook' => $welcome_facebook, 
+			'linkedin' => $welcome_linkedin, 
+			'text' => $welcome_text,
+			'text_en' => $welcome_text, 
+			'image' => $welcome_image, 
+		) 
+	);
 }
 
 
@@ -89,11 +143,21 @@ function wpse_custom_excerpts($limit) {
 
 function setup_BAB_theme_admin_menus() {
 	add_menu_page(__('Static Text(BAB)','BAB-theme-menu'), __('Static Text(BAB)','BAB-theme-menu'), 'manage_options', 'BAB_StaticText', 'bab_toplevel_page' );
+	
+	add_menu_page(__('People(BAB)','BAB-people-menu'), __('People(BAB)','BAB-people-menu'), 'manage_options', 'BAB_People', 'babp_toplevel_page' );
+
+    // Add a submenu to the custom top-level menu:
+    add_submenu_page('BAB_People', __('Options','BAB-people-menu'), __('Options','BAB-people-menu'), 'manage_options', 'Options', 'babp_options_page');
+
+    // Add a second submenu to the custom top-level menu:
+    //add_submenu_page('BAB_People', __('Delete Person','menu-test'), __('Delete Person','menu-test'), 'manage_options', 'Delete_People', 'mt_sublevel_page2');
 
 }
 add_action("admin_menu", "setup_BAB_theme_admin_menus");
 
 include ("include/admin/pages/menupages.php");
+
+include ("include/admin/pages/tablePeople.php");
 
 
 function echo_static_text($textName){
@@ -134,5 +198,30 @@ function getStaticTextFromPost($category){
 	return $aPost[0];
 }
 
+function BABP_getPeople($lang){
+	global $wpdb;
+	$sortBy = get_option( 'BABP_sortBy');
+	$sortDirection = get_option( 'BABP_sortDirection');
+	$table_name = $wpdb->prefix . 'BABP';
+	$people = $wpdb->get_results( 'SELECT * FROM '.$table_name.' ORDER BY `'.$table_name.'`.`'.$sortBy.'` '.$sortDirection.'');
+	
+	foreach($people as $person){?>
+		
+        <div id="person<?php echo $person->id; ?>" class="person">
+            		<span class="personPhoto"><img src="<?php echo site_url().$person->image; ?>" alt=""/></span>
+                    <span class="personText">
+                    	<span class="personSocialContainer"><a href="<?php echo $person->facebook; ?>"><img src="<?php bloginfo('template_directory');?>/image/weAreFacebook.png" alt=""/></a><a href="<?php echo $person->linkedin; ?>"><img src="<?php bloginfo('template_directory');?>/image/weAreLinkedin.png" alt=""/></a></span>
+                    	<div class="personName"><?php echo $person->name; ?></div>
+                        <div class="personJob"><?php  if($lang == "pt"){echo $person->job;} elseif($lang == "en"){ echo $person->job_en;} ?></div>
+                        </span>
+                        <div class="personDescription"><?php if($lang == "pt"){ echo $person->text; }elseif($lang == "en"){ echo $person->text_en;} ?></div>
+                    
+        </div>
+	
+    
+    <?php
+	}
+	//echo "people";
+}
 
 ?>

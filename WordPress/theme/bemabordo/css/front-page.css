@@ -17,7 +17,7 @@ html, body{
 }
 #content{
 	position:absolute;
-	top:118px;
+	top:114px;
 	width: 100%;	
 }
 .carouselImageContainer{
@@ -69,14 +69,14 @@ html, body{
 		font-family: 'PT Sans', sans-serif;
 		font-weight:bold;
 	font-style: italic;
-	font-size:32px;
+	font-size:1.70em;
 	margin-top:20px;
 }
 .textBottomLine{
 		font-family: 'PT Sans', sans-serif;
 		font-weight:bold;
 	font-style: italic;
-	font-size:32px;
+	font-size:1.70em;
 	margin-top:20px;
 }
 .welcome{
@@ -148,11 +148,11 @@ html, body{
 	/*max-width */
 }
 .floater{
-    width: 300px;
+    max-width: 300px;
     display: inline-block;
     margin: 20px;
 	font-family: 'Libre Franklin', sans-serif;
-	 vertical-align:top;
+	vertical-align:top;
 }
 .floaterTitle{
 	font-size:20px;
@@ -174,16 +174,19 @@ html, body{
 	color:#666666;
 }
 #whoWeAreFloatersContainer{
-	text-align:left;
+	text-align:center;
 }
 
 .person{
     display: inline-block;
-    width: 510px;
+    max-width: 510px;
+	width:47%;
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-right: 15px;
+	vertical-align:top;
+	text-align:left;
 	vertical-align:top;
 }
 
@@ -194,7 +197,8 @@ html, body{
 
 .personText{
 	display: inline-block;
-    width: 320px;
+    max-width: 320px;
+	width:30%;
 }
 
 .personSocialContainer a{
@@ -212,6 +216,7 @@ html, body{
 }
 .personDescription{
 	margin-top:12px;
+	max-width:510px;
 }
 
 #news.container{
@@ -316,15 +321,72 @@ span.clear { clear: left; display: block; }
 }
 
 
-
-@media only screen and (max-width: 1070px) and (min-width: 842px) {
+@media only screen and (max-width: 1420px) {
+	.personDescription{
+		max-width:400px;
+	}
+}
+@media only screen and (max-width: 1130px) {
+	.personDescription{
+		max-width:400px;
+	}
+}
+@media only screen and (max-width: 1070px) {
 	.carouselImageContainer img{
 		max-width:600px;
 		 width: auto;
   		height: auto;
 	}
+	.carouselImageContainer .imageText{
+		font-size: 1em;	
+	}
+	#home{
+		height:auto;
+	}
+	.contentContainer{
+		width:100%;
+	}
+		
+}
+@media only screen and (max-width: 900px) {
+#mission.container {
+	    background-image: url(../image/mission_2500px.png);
+		background-position: center bottom !important;
+		max-height: 2500px;
+		height:auto;
+}
+	#missionText{
+		position: relative;
+    	bottom: 20px;
+    	margin-left: auto;
+    	margin-right: auto;
+		margin-top: 50px;
+	}
+}
+@media only screen and (max-width: 675px) {
+	.person,.personDescription{
+		width:100%;
+		max-width: none;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.carouselImageContainer img{
+		max-width:300px;
+		 width: auto;
+  		height: auto;
+	}
+	.carouselImageContainer .imageText{
+		font-size: 0.5em;	
+	}
 	#home{
 		height:auto;
 	}
 		
+}
+@media only screen and (max-width: 380px) {
+	.thumbnail img{
+		max-width:100%;
+		width:auto;
+		height:auto;	
+	}
 }

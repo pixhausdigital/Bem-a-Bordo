@@ -16,9 +16,9 @@ html, body{
 	text-align:center;
 }
 #logoContainer{
-	height: 193px; /* size of logo image */
+	height: 167px; /* size of logo image */
 	position:absolute;
-	top:-21px;
+	top:-5px;
 }
 .logoSpan{
 	width:115px; /* size of logo image */
@@ -38,9 +38,12 @@ html, body{
 	height:100%;
 	display:inline-block;
 	text-align:left;
+	position:relative;
 }
 #menuContainer{
 	float:right;
+}
+.menu{
 	font-family: 'Libre Franklin', sans-serif;
 	font-size:0.96em;
 	color:#0085a6;
@@ -51,6 +54,25 @@ html, body{
 }
 #menuContainer span:last-of-type{
 	margin-right:0px;	/* same as socialContainer*/
+}
+#hamburgerMenuIcon{
+	position: absolute;
+    right: 0px;
+    top: -15px;
+	display:none;
+}
+#hamburgerMenuContainer{
+	position:absolute;
+	width: auto;
+    right: 0px;
+    top: 23px;
+	background-color:#d4e7e6;
+	display:none;	
+}
+#hamburgerMenuContainer div{
+	margin-left:10px;
+	margin-right:10px;
+	margin-top: 5px;	
 }
 #floatContainer{
 	float:right;
@@ -71,4 +93,59 @@ html, body{
 #languageContainer img{
 	margin-left:10px;
 }
-
+@media only screen and (max-width: 1140px) {
+	#menuContainer span{
+		margin-left:10px;
+		margin-right:10px;	
+	}
+}
+@media only screen and (max-width: 1020px) {
+	#menuContainer span{
+		margin-left:5px;
+		margin-right:5px;	
+	}
+}
+@media only screen and (max-width: 950px) {
+	#menuContainer{
+		visibility:hidden;
+		width:10px;
+		height:20px;
+		overflow:hidden;	
+	}
+	#hamburgerMenuIcon{
+		display:initial;	
+	}
+}
+@media only screen and (max-width: 500px) {
+	#languageContainer, #socialContainer {
+		margin-left: 20px;
+	}
+	#languageContainer img,#socialContainer img {
+		margin-left: 5px;
+	}
+	#logoContainer img{
+		max-width:150px;
+		width:auto;
+		height:auto;	
+	}
+}
+@media only screen and (max-width: 400px) {
+	/*
+	#logoContainer{
+		max-width: 120px;
+   		width: 100%;
+    	height: 100%;
+		background-color:#FFFFFF;
+		border:#FFFFFF thin;
+		border-radius: 20px;
+		background-image:url(../image/logo.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		top:5px;
+	}
+	#logoContainer img{
+		display:none;
+	}
+	*/
+}
