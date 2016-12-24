@@ -21,6 +21,7 @@ function BAB_setup_options () {
   		`text_pt` text NOT NULL,
   		`time` datetime NOT NULL,
   		`container` varchar(90) NOT NULL,
+		`textClass` varchar(90) NOT NULL,
 		PRIMARY KEY  (id)
 	) $charset_collate;";
 	
@@ -114,7 +115,7 @@ function getStaticTextFromDatabase($id){
 	$results = $wpdb->get_results( 'SELECT * FROM '.$table_name." WHERE id='".$id."'",ARRAY_A );
 	foreach($results as $text){
 		
-		return ($text["text_".$lang]);
+		return html_entity_decode($text["text_".$lang]);
 	}
 	
 }

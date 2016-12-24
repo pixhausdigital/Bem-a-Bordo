@@ -125,7 +125,7 @@ body{
 	position:relative;
 }
 #missionTitle{
-	color:rgba(255,255,255,1.00);	
+	/*color:rgba(255,255,255,1.00);	*/
 }
 #missionText{
 	position:absolute;
@@ -200,6 +200,9 @@ body{
     top: -29px;
     left: -10px;
 }
+#trainingIcon.floaterIcon img{
+    top: -5px;	
+}
 #whoWeAre.container{
 	background-color:#e6e8e1;
 	font-family: 'Libre Franklin', sans-serif;
@@ -208,6 +211,9 @@ body{
 }
 #whoWeAreTitle{
 	color:#666666;
+}
+#whoWeAreText{
+	color:#808080;
 }
 #whoWeAreFloatersContainer{
 	text-align:center;
@@ -357,6 +363,20 @@ span.clear { clear: left; display: block; }
     margin-top: -1em;
 }
 
+#footer{
+	text-align:center;
+background-color:rgba(0,0,0,1.00);
+color:rgba(255,255,255,1.00);
+padding:1.5em;
+padding-left: 0em;
+padding-right: 0em;
+    font-size: 0.8em;
+	/*min-width:354px; */
+}
+#footerContainer img{
+	margin-left:1em;
+	margin-right:1em;
+}
 
 @media only screen and (max-width: 1420px) {
 	.personDescription{
@@ -424,6 +444,21 @@ span.clear { clear: left; display: block; }
 		margin-top: 50px;
 	}
 	**/
+}
+@media only screen and (max-width: 730px) {
+	.floaterIcon{
+	    height: initial;
+    	min-width: initial;
+    	min-height: initial;
+    	display: block;
+    	vertical-align: initial;
+    	position: initial;
+	}
+	
+	.floaterIcon img,#trainingIcon.floaterIcon img {
+		top: auto;
+		left:auto;
+	}
 }
 @media only screen and (max-width: 675px) {
 	.person,.personDescription{

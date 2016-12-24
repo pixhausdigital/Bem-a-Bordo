@@ -47,19 +47,19 @@ include_once ("include/lang_detect.php");
         <div id="missionTextContainer">
         <div id="missionText">
         <div id="missionTitle" class="titlePart"><?php echo_static_text("missionTitle") ?></div>
-        	<?php //echo_static_text("missionText") ?>
-			Superar expectativas, encantar, realizar e entregar com qualidade, profissionalismo e ética as soluções e os serviços a que se propõe; surpreender o cliente na conquista de resultados efetivos; inspirar pessoas e organizações a conquistar parcerias duradoras e negócios confiáveis.
+        	<?php echo_static_text("missionText") ?>
+			
         </div>
         <div id="visionText">
-        <div id="visionTitle" class="titlePart"> Visão<?php //echo_static_text("missionTitle") ?></div>
-        Ser uma empresa bem-sucedida, de alta eficiência e de reconhecida excelência na resolução dos desafios apresentados pelo cliente em tornar seus negócios lucrativos e sustentáveis, contribuindo assim, para a construção de uma sociedade mais ética, justa e sustentável.
+        <div id="visionTitle" class="titlePart"><?php echo_static_text("visionTitle") ?></div>
+        	<?php echo_static_text("visionText") ?>
         </div>
         <div id="valuesText">
-        <div id="valuesTitle" class="titlePart"> Valores<?php //echo_static_text("missionTitle") ?></div>
-        Acreditar na lisura dos negócios, na qualidade das relações, na colaboração mútua, na inovação, no compartilhar, na responsabilidade e no cumprimento do dever para com as gerações futuras, praticando sustentabilidade.
-
+        <div id="valuesTitle" class="titlePart"><?php echo_static_text("valuesTitle") ?></div>
+        	<?php echo_static_text("valuesText") ?>
         </div>
     </div>
+</div>
 </div>
 
 <div id="whatWeDo" class="container">
@@ -92,11 +92,11 @@ include_once ("include/lang_detect.php");
                 </div>
             </div>
             
-            <div id="consultingFloater" class="floater">
-            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
-                <div id="consultingTextContainer" class="weDoTextContainer">
-                <div id="consultingTitle" class="floaterTitle"> Governança Corporativa<?php //echo_static_text("planningTitle") ?></div>
-                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+            <div id="corporateGovernanceFloater" class="floater">
+            	<div id="corporateGovernanceIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/cap.png" alt=""/></div>
+                <div id="corporateGovernanceTextContainer" class="weDoTextContainer">
+                <div id="corporateGovernanceTitle" class="floaterTitle"> Governança Corporativa<?php //echo_static_text("planningTitle") ?></div>
+                <div id="corporateGovernanceText"><?php //echo_static_text("planningText") ?>
                 <ul>
                 	<li>Administração e Gestão terceirizados</li>
                 
@@ -111,11 +111,11 @@ include_once ("include/lang_detect.php");
                 </div>
             </div>
             
-            <div id="consultingFloater" class="floater">
-            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
-                <div id="consultingTextContainer" class="weDoTextContainer">
-                <div id="consultingTitle" class="floaterTitle"> Formação, Capacitação e Treinamento<?php //echo_static_text("planningTitle") ?></div>
-                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+            <div id="trainingFloater" class="floater">
+            	<div id="trainingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/knot.png" alt=""/></div>
+                <div id="trainingTextContainer" class="weDoTextContainer">
+                <div id="trainingTitle" class="floaterTitle"> Formação, Capacitação e Treinamento<?php //echo_static_text("planningTitle") ?></div>
+                <div id="trainingText"><?php //echo_static_text("planningText") ?>
                 <ul>
 <li>Análise de riscos ambientais e operacionais</li> 
 <li>  Análise de riscos e combate a corrupção</li> 
@@ -137,11 +137,11 @@ include_once ("include/lang_detect.php");
                 </div>
             </div>
             
-            <div id="consultingFloater" class="floater">
-            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
-                <div id="consultingTextContainer" class="weDoTextContainer">
-                <div id="consultingTitle" class="floaterTitle"> Laudos<?php //echo_static_text("planningTitle") ?></div>
-                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+            <div id="reportsFloater" class="floater">
+            	<div id="reportsIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/helm.png" alt=""/></div>
+                <div id="reportsTextContainer" class="weDoTextContainer">
+                <div id="reportsTitle" class="floaterTitle"> Laudos<?php //echo_static_text("planningTitle") ?></div>
+                <div id="reportsText"><?php //echo_static_text("planningText") ?>
                 <ul>
 <li> Engenharia construtiva</li> 
 <li>  Químicos e ambientais</li> 
@@ -153,11 +153,11 @@ include_once ("include/lang_detect.php");
                 </div>
             </div>
             
-            <div id="consultingFloater" class="floater">
-            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
-                <div id="consultingTextContainer" class="weDoTextContainer">
-                <div id="consultingTitle" class="floaterTitle">Sustentabilidade e Responsabilidade social<?php //echo_static_text("planningTitle") ?></div>
-                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+            <div id="sustainabilityFloater" class="floater">
+            	<div id="sustainabilityIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/lighthouse.png" alt=""/></div>
+                <div id="sustainabilityTextContainer" class="weDoTextContainer">
+                <div id="sustainabilityTitle" class="floaterTitle">Sustentabilidade e Responsabilidade social<?php //echo_static_text("planningTitle") ?></div>
+                <div id="sustainabilityText"><?php //echo_static_text("planningText") ?>
                 <ul>
 <li>o Criação de indicadores de desempenho</li> 
 <li>Relatórios de sustentabilidade</li> 
@@ -167,44 +167,6 @@ include_once ("include/lang_detect.php");
                 </div>
                 </div>
             </div>
-            
-            <!--
-            <div id="planningFloater" class="floater">
-            	<div id="planningIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
-                <div id="planningTitle" class="floaterTitle"><?php echo_static_text("planningTitle") ?></div>
-                <div id="planningText"><?php echo_static_text("planningText") ?></div>
-            </div>
-            
-            <div id="advisoryFloater" class="floater">
-            	<div id="advisoryIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/lighthouse.png" alt=""/></div>
-                <div id="advisoryTitle" class="floaterTitle"><?php echo_static_text("advisoryTitle") ?></div>
-                <div id="advisoryText"><?php echo_static_text("advisoryText") ?></div>
-            </div>
-            
-            <div id="trainingFloater" class="floater">
-            	<div id="trainingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/knot.png" alt=""/></div>
-                <div id="trainingTitle" class="floaterTitle"><?php echo_static_text("trainingTitle") ?></div>
-                <div id="trainingText"><?php echo_static_text("trainingText") ?></div>
-            </div>
-            
-            <div id="administrationFloater" class="floater">
-            	<div id="administrationIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/cap.png" alt=""/></div>
-                <div id="administrationTitle" class="floaterTitle"><?php echo_static_text("administrationTitle") ?></div>
-                <div id="administrationText"><?php echo_static_text("administrationText") ?></div>
-            </div>
-            
-              <div id="managementFloater" class="floater">
-            	<div id="managementIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/helm.png" alt=""/></div>
-                <div id="managementTitle" class="floaterTitle"><?php echo_static_text("managementTitle") ?></div>
-                <div id="managementText"><?php echo_static_text("managementText") ?></div>
-            </div>
-            
-            <div id="habilitationFloater" class="floater">
-            	<div id="habilitationIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/ship.png" alt=""/></div>
-                <div id="habilitationTitle" class="floaterTitle"><?php echo_static_text("habilitationTitle") ?></div>
-                <div id="habilitationText"><?php echo_static_text("habilitationText") ?></div>
-            </div>
-            -->
         </div>
 	</div>
 </div>
@@ -212,7 +174,7 @@ include_once ("include/lang_detect.php");
 <div id="whoWeAre" class="container">
 	<div id="whoWeAreContentContainer" class="contentContainer">
     	<div id="whoWeAreTitle" class="titlePart"><?php echo_static_text("whoWeAreTitle") ?></div>
-        
+        <div id="whoWeAreText">Constituída por profissionais qualificados e bem sucedidos em suas áreas de atuação, com formação acadêmica compatível e alinhada com a cultura organizacional, a Bem a Bordo atua com ética e transparência, gerando uma relação de confiança com o cliente. Atua para transformar e desenvolver as pessoas e organizações através de capacitação, treinamento e qualificação para o desenvolvimento de competências. Desenvolve soluções integradas em formação corporativa, capacitação técnica e treinamento específico. Através de consultoria empresarial oferece metodologias para disseminar conhecimentos, práticas, tecnologias e inovações para consolidação da busca pela melhoria contínua dos produtos e serviços de seus clientes.  Assim como a Bem a Bordo, a equipe privilegia a ética, a excelência, a qualidade, o respeito, o comprometimento e o profissionalismo em suas relações.</div>
         	<div id="whoWeAreFloatersContainer">
         		<?php if(function_exists('BABP_getPeople')){
 					BABP_getPeople($lang);
@@ -330,8 +292,11 @@ wp_reset_postdata();
 </div>
 
 	</div>
+    <div id="footer" class="container">
+<footer><span id="companyName"> Bem a Bordo 2016      
+<?php //echo ; ?></span> - <span id="credits">Images by Freepik</span></footer>
 </div>
-
+</div>
 
 </div>
 </body>
