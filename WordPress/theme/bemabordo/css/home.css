@@ -1,0 +1,20 @@
+.newsFloaterContainer{
+    max-width: 300px;
+    margin-right: 20px;
+	margin-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+	text-align:left;
+	font-family: 'Libre Franklin', sans-serif;	
+}
+#imageNewsContainer{
+	margin-top:50px;
+}
+.container {
+    text-align: center;
+    position: relative;
+}
+.contentContainer{
+	display:inline-block;
+	width:75%;
+}

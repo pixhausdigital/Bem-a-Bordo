@@ -69,6 +69,7 @@ $wpdb->insert(
 		'container' => "1_menu"
 	) 
 );
+/**
 $wpdb->insert( 
 	$table_name, 
 	array( 
@@ -89,13 +90,14 @@ $wpdb->insert(
 		'container' => "2_home"
 	) 
 );
+**/
 $wpdb->insert( 
 	$table_name, 
 	array( 
 		'time' => current_time( 'mysql' ), 
 		'id' => "welcome", 
 		'text_en' => "", 
-		'text_pt' => "Bem Vindo a Bordo!", 
+		'text_pt' => "Ética, respeito, integridade, justiça e responsabilidade.", 
 		'container' => "2_home"
 	) 
 );
@@ -156,6 +158,7 @@ $wpdb->insert(
 		'container' => "5_whatWeDo"
 	) 
 );
+/**
 $wpdb->insert( 
 	$table_name, 
 	array( 
@@ -276,6 +279,8 @@ $wpdb->insert(
 		'container' => "5_whatWeDo"
 	) 
 );
+**/
+
 $wpdb->insert( 
 	$table_name, 
 	array( 

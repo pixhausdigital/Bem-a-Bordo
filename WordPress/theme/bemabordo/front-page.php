@@ -13,11 +13,8 @@ include_once ("include/lang_detect.php");
 <div id="home" class="container">
 	<div id="carousel">
         <div class="carouselImageContainer"><img src="<?php echo getCarrouselImage("1"); ?>" width="1067" height="600" alt=""/>
-        <div class="imageText">
-        <div class="textTopLine"><?php echo_static_text("textTopLine") ?></div>
-    <div class="textBottomLine"><?php echo_static_text("textBottomLine") ?></div>
-    
-    <div class="welcome"><?php echo_static_text("welcome") ?></div>
+        <div class="imageText">    
+   		 <div class="welcome"><?php echo_static_text("welcome") ?></div>
     </div>
     <div class="imageOverlay"></div>
         </div>
@@ -47,12 +44,19 @@ include_once ("include/lang_detect.php");
 
 <div id="mission" class="container">
 	<div id="missionContentContainer" class="contentContainer">
-    	<div id="missionTitle" class="titlePart"><?php echo_static_text("missionTitle") ?></div>
-        
-        <div id="missionSpacer"></div>
-        
+        <div id="missionTextContainer">
         <div id="missionText">
-        	<?php echo_static_text("missionText") ?>
+        <div id="missionTitle" class="titlePart"><?php echo_static_text("missionTitle") ?></div>
+        	<?php //echo_static_text("missionText") ?>
+			Superar expectativas, encantar, realizar e entregar com qualidade, profissionalismo e ética as soluções e os serviços a que se propõe; surpreender o cliente na conquista de resultados efetivos; inspirar pessoas e organizações a conquistar parcerias duradoras e negócios confiáveis.
+        </div>
+        <div id="visionText">
+        <div id="visionTitle" class="titlePart"> Visão<?php //echo_static_text("missionTitle") ?></div>
+        Ser uma empresa bem-sucedida, de alta eficiência e de reconhecida excelência na resolução dos desafios apresentados pelo cliente em tornar seus negócios lucrativos e sustentáveis, contribuindo assim, para a construção de uma sociedade mais ética, justa e sustentável.
+        </div>
+        <div id="valuesText">
+        <div id="valuesTitle" class="titlePart"> Valores<?php //echo_static_text("missionTitle") ?></div>
+        Acreditar na lisura dos negócios, na qualidade das relações, na colaboração mútua, na inovação, no compartilhar, na responsabilidade e no cumprimento do dever para com as gerações futuras, praticando sustentabilidade.
 
         </div>
     </div>
@@ -63,7 +67,109 @@ include_once ("include/lang_detect.php");
     	<div id="whatWeDoTitle" class="titlePart"><?php echo_static_text("whatWeDoTitle") ?></div>
         
         <div id="whatWeDoFloatersContainer">
-        	<div id="planningFloater" class="floater">
+        	
+            <div id="consultingFloater" class="floater">
+            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
+                <div id="consultingTextContainer" class="weDoTextContainer">
+                <div id="consultingTitle" class="floaterTitle"> Consultoria, assessoria e gestão organizacional<?php //echo_static_text("planningTitle") ?></div>
+                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+                <ul>
+                	<li>Administração e Gestão terceirizados</li>
+                
+<li>Gestão de empreendimentos náuticos</li>
+<li>Organização e readequação de marinas e estruturas náuticas;</li>
+<li>Adequação e atendimento aos requisitos legais </li>
+<li>Diagnóstico Ambiental</li>
+<li>Segurança e saúde ocupacional</li>
+<li>Análise e gerenciamento de riscos</li>
+<li>Desenvolvimento, implantação e manutenção de sistemas de gestão</li>
+<li>Implantação de Sistema Integrado de Gestão da ISO 9001, ISO 14001 e OHSAS 18001</li>
+<li>Gerenciamento de resíduos e recuperação energética</li>
+<li>Prevenção e controle da poluição em instalações náuticas</li>
+
+                </ul>
+                </div>
+                </div>
+            </div>
+            
+            <div id="consultingFloater" class="floater">
+            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
+                <div id="consultingTextContainer" class="weDoTextContainer">
+                <div id="consultingTitle" class="floaterTitle"> Governança Corporativa<?php //echo_static_text("planningTitle") ?></div>
+                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+                <ul>
+                	<li>Administração e Gestão terceirizados</li>
+                
+<li>Auditorias de 1ª e 2ª partes</li>
+<li>Compliance, Conformidade legal, Combate à Corrupção</li>
+<li>Desenvolvimento Sustentável</li>
+<li>Due Diligence</li>
+<li>Marketing de Relacionamento</li>
+<li>Planejamento Estratégico</li>
+                </ul>
+                </div>
+                </div>
+            </div>
+            
+            <div id="consultingFloater" class="floater">
+            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
+                <div id="consultingTextContainer" class="weDoTextContainer">
+                <div id="consultingTitle" class="floaterTitle"> Formação, Capacitação e Treinamento<?php //echo_static_text("planningTitle") ?></div>
+                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+                <ul>
+<li>Análise de riscos ambientais e operacionais</li> 
+<li>  Análise de riscos e combate a corrupção</li> 
+<li>  Atendimento a emergências ambientais: brigadas de incêndio; combate a fogo embarcado (segmentonáutico), primeiros socorros; sobrevivência no mar</li> 
+<li>  Boas práticas de operação e manejo em estruturas náuticas</li> 
+<li>  Excelência no atendimento</li> 
+<li>  Formação de auditores internos</li> 
+<li>  Identificação de riscos ambientais, de segurança e saúde ocupacional;</li> 
+<li>  Identificação de riscos de corrupção e ações de prevenção;</li> 
+<li>  Planos de emergência</li> 
+<li>  Prevenção e combate a riscos operacionais (incêndios e avarias)</li> 
+<li>  Identificação de avaliação da legislação aplicável</li> 
+<li>  Formação e treinamento para obtenção de habilitação para arrais amadores</li> 
+<li>  Atendimento aos requisitos legais da Marinha do Brasil na prestação de serviços terceirizados</li> 
+<li>  Treinamento para uso racional de recursos em embarcações: água e energia</li>
+
+                </ul>
+                </div>
+                </div>
+            </div>
+            
+            <div id="consultingFloater" class="floater">
+            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
+                <div id="consultingTextContainer" class="weDoTextContainer">
+                <div id="consultingTitle" class="floaterTitle"> Laudos<?php //echo_static_text("planningTitle") ?></div>
+                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+                <ul>
+<li> Engenharia construtiva</li> 
+<li>  Químicos e ambientais</li> 
+<li>  Programa de Prevenção a Riscos Ambientais – PPRA</li> 
+<li>  Análises de segurança e saúde ocupacional</li> 
+
+                </ul>
+                </div>
+                </div>
+            </div>
+            
+            <div id="consultingFloater" class="floater">
+            	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
+                <div id="consultingTextContainer" class="weDoTextContainer">
+                <div id="consultingTitle" class="floaterTitle">Sustentabilidade e Responsabilidade social<?php //echo_static_text("planningTitle") ?></div>
+                <div id="consultingText"><?php //echo_static_text("planningText") ?>
+                <ul>
+<li>o Criação de indicadores de desempenho</li> 
+<li>Relatórios de sustentabilidade</li> 
+<li>Desenvolvimento Sustentável – implantação de programas</li> 
+
+                </ul>
+                </div>
+                </div>
+            </div>
+            
+            <!--
+            <div id="planningFloater" class="floater">
             	<div id="planningIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
                 <div id="planningTitle" class="floaterTitle"><?php echo_static_text("planningTitle") ?></div>
                 <div id="planningText"><?php echo_static_text("planningText") ?></div>
@@ -98,7 +204,7 @@ include_once ("include/lang_detect.php");
                 <div id="habilitationTitle" class="floaterTitle"><?php echo_static_text("habilitationTitle") ?></div>
                 <div id="habilitationText"><?php echo_static_text("habilitationText") ?></div>
             </div>
-            
+            -->
         </div>
 	</div>
 </div>
@@ -138,7 +244,7 @@ foreach ( $myposts as $post ) : setup_postdata( $post );
 	$apost["exerpt"]=wpse_custom_excerpts(20);
 	$apost["date"]=get_the_date("d/m/Y");
 	if ( has_post_thumbnail() ) {
-		$apost["image"] = get_the_post_thumbnail();
+		$apost["image"] = get_the_post_thumbnail($post->ID, 'medium');
 		
 		//the_post_thumbnail();
 	}else{

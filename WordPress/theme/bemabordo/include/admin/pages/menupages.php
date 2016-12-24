@@ -32,6 +32,11 @@ function bab_toplevel_page() {
 	}
 	echo'<button type="submit" name="save">Save</button>';
 	echo "</form>";
+	$content = '';
+$editor_id = 'mycustomeditor';
+$settings = array( 'media_buttons' => false, 'teeny' => true, 'wpautop' => true );
+
+wp_editor( $content, $editor_id, $settings );
 }
 
 
