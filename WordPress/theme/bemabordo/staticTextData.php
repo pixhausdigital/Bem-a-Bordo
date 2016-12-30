@@ -126,12 +126,7 @@ $wpdb->insert(
 		'time' => current_time( 'mysql' ), 
 		'id' => "aboutUsText", 
 		'text_en' => htmlentities (""), 
-		'text_pt' => htmlentities ("“O Mestre na arte da vida faz pouca distinção entre o seu trabalho e o seu lazer, entre a sua mente e o seu corpo, entre a sua educação e a sua recreação, entre o seu amor e a sua religião. Ele dificilmente sabe distinguir um corpo do outro. Ele simplesmente persegue sua visão de excelência em tudo que faz, deixando para os outros a decisão de saber se está trabalhando ou se divertindo. Ele acha que está sempre fazendo as duas coisas simultaneamente.” <br>
-		O texto budista acima expressa em sua simplicidade, a política de negócios da Bem a Bordo, contemplando nossa missão, visão, princípios e valores. 
-		<br>Bem a Bordo – Negócios Sustentáveis foi criada com o objetivo de contribuir para uma sociedade mais justa e equilibrada, onde os negócios prosperam porque são bons e porque devem servir à sociedade.
-		<br> Nós, sócios fundadores, temos como filosofia de vida e propósito de existência, gostar tanto do que fazemos que não sabemos se trabalhamos nos divertindo ou, se nos divertimos trabalhando! 
-		<br>Com essa política de bem viver e “bem trabalhar”, conquistamos uma equipe multidisciplinar de colaboradores, contratados, parceiros e apoiadores que é formada por engenheiros, químicos, advogados, auditores, profissionais de marketing e mídias. Conosco estão também, valorosos profissionais oriundos do quadro de reserva da Marinha do Brasil, de comitês técnicos de organizações públicas e privadas de onde trouxeram larga experiência em suas respectivas áreas de atuação. As relações são estabelecidas com base na ética e na transparência, o que produz resultados altamente satisfatórios e confiáveis. 
-		<br>Que possamos ser mestres na arte da vida, deixando nossa marca de excelência por onde passarmos."), 
+		'text_pt' => htmlentities ("Bem a Bordo – Gestão de Negócios Sustentáveis foi criada para centralizar o trabalho voluntário, informal e de caráter profissional, que vinha sendo realizado por seus fundadores. Sua atuação está na prestação de serviços de gestão operacional e administrativa; gestão ambiental; nas engenharias; na formação, capacitação e treinamento técnicos, inclusive para o segmento náutico. Realiza auditorias, elabora projetos e assessora na implantação de sistemas de gestão para certificações internacionais e de responsabilidade social.  Sediada em São Paulo e representada no Rio de Janeiro, atua em todo o território nacional através de parcerias, com criatividade, inovação e permanente atualização para criar soluções personalizadas e competitivas para seus clientes."), 
 		'container' => "3_aboutUs",
 		'textClass' => "simple"
 	) 
@@ -207,6 +202,168 @@ $wpdb->insert(
 		'id' => "whatWeDoTitle", 
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("O que Fazemos"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+
+
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "consultingTitle", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Consultoria, assessoria e gestão organizacional"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "consultingText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("<ul>
+                	<li>Administração e Gestão terceirizados</li>
+                
+<li>Gestão de empreendimentos náuticos</li>
+<li>Organização e readequação de marinas e estruturas náuticas;</li>
+<li>Adequação e atendimento aos requisitos legais </li>
+<li>Diagnóstico Ambiental</li>
+<li>Segurança e saúde ocupacional</li>
+<li>Análise e gerenciamento de riscos</li>
+<li>Desenvolvimento, implantação e manutenção de sistemas de gestão</li>
+<li>Implantação de Sistema Integrado de Gestão da ISO 9001, ISO 14001 e OHSAS 18001</li>
+<li>Gerenciamento de resíduos e recuperação energética</li>
+<li>Prevenção e controle da poluição em instalações náuticas</li>
+
+                </ul>"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "corporateGovernanceTitle", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Governança Corporativa"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "corporateGovernanceText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities (" <ul>
+                	<li>Administração e Gestão terceirizados</li>
+                
+<li>Auditorias de 1ª e 2ª partes</li>
+<li>Compliance, Conformidade legal, Combate à Corrupção</li>
+<li>Desenvolvimento Sustentável</li>
+<li>Due Diligence</li>
+<li>Marketing de Relacionamento</li>
+<li>Planejamento Estratégico</li>
+                </ul>"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "trainingTitle", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Formação, Capacitação e Treinamento"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "trainingText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("<ul>
+<li>Análise de riscos ambientais e operacionais</li> 
+<li>  Análise de riscos e combate a corrupção</li> 
+<li>  Atendimento a emergências ambientais: brigadas de incêndio; combate a fogo embarcado (segmentonáutico), primeiros socorros; sobrevivência no mar</li> 
+<li>  Boas práticas de operação e manejo em estruturas náuticas</li> 
+<li>  Excelência no atendimento</li> 
+<li>  Formação de auditores internos</li> 
+<li>  Identificação de riscos ambientais, de segurança e saúde ocupacional;</li> 
+<li>  Identificação de riscos de corrupção e ações de prevenção;</li> 
+<li>  Planos de emergência</li> 
+<li>  Prevenção e combate a riscos operacionais (incêndios e avarias)</li> 
+<li>  Identificação de avaliação da legislação aplicável</li> 
+<li>  Formação e treinamento para obtenção de habilitação para arrais amadores</li> 
+<li>  Atendimento aos requisitos legais da Marinha do Brasil na prestação de serviços terceirizados</li> 
+<li>  Treinamento para uso racional de recursos em embarcações: água e energia</li>
+
+                </ul>"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "reportsTitle", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Laudos"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "reportsText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("<ul>
+<li> Engenharia construtiva</li> 
+<li>  Químicos e ambientais</li> 
+<li>  Programa de Prevenção a Riscos Ambientais – PPRA</li> 
+<li>  Análises de segurança e saúde ocupacional</li> 
+
+                </ul>"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "sustainabilityTitle", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Sustentabilidade e Responsabilidade social"), 
+		'container' => "5_whatWeDo",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "sustainabilityText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities (" <ul>
+<li>o Criação de indicadores de desempenho</li> 
+<li>Relatórios de sustentabilidade</li> 
+<li>Desenvolvimento Sustentável – implantação de programas</li> 
+
+                </ul>"), 
 		'container' => "5_whatWeDo",
 		'textClass' => "simple"
 	) 
@@ -341,6 +498,17 @@ $wpdb->insert(
 		'id' => "whoWeAreTitle", 
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Quem Somos"), 
+		'container' => "5_whoWeAre",
+		'textClass' => "simple"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "whoWeAreText", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Constituída por profissionais qualificados e bem sucedidos em suas áreas de atuação, com formação acadêmica compatível e alinhada com a cultura organizacional, a Bem a Bordo atua com ética e transparência, gerando uma relação de confiança com o cliente. Atua para transformar e desenvolver as pessoas e organizações através de capacitação, treinamento e qualificação para o desenvolvimento de competências. Desenvolve soluções integradas em formação corporativa, capacitação técnica e treinamento específico. Através de consultoria empresarial oferece metodologias para disseminar conhecimentos, práticas, tecnologias e inovações para consolidação da busca pela melhoria contínua dos produtos e serviços de seus clientes.  Assim como a Bem a Bordo, a equipe privilegia a ética, a excelência, a qualidade, o respeito, o comprometimento e o profissionalismo em suas relações."), 
 		'container' => "5_whoWeAre",
 		'textClass' => "simple"
 	) 

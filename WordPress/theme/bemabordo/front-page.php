@@ -71,84 +71,9 @@ include_once ("include/lang_detect.php");
             <div id="consultingFloater" class="floater">
             	<div id="consultingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/compass.png" alt=""/></div>
                 <div id="consultingTextContainer" class="weDoTextContainer">
-                <div id="consultingTitle" class="floaterTitle"> Consultoria, assessoria e gestão organizacional<?php //echo_static_text("planningTitle") ?></div>
-                <div id="consultingText"><?php //echo_static_text("planningText") ?>
-                <ul>
-                	<li>Administração e Gestão terceirizados</li>
+                <div id="consultingTitle" class="floaterTitle"> <?php echo_static_text("consultingTitle") ?></div>
+                <div id="consultingText"><?php echo_static_text("consultingText") ?>
                 
-<li>Gestão de empreendimentos náuticos</li>
-<li>Organização e readequação de marinas e estruturas náuticas;</li>
-<li>Adequação e atendimento aos requisitos legais </li>
-<li>Diagnóstico Ambiental</li>
-<li>Segurança e saúde ocupacional</li>
-<li>Análise e gerenciamento de riscos</li>
-<li>Desenvolvimento, implantação e manutenção de sistemas de gestão</li>
-<li>Implantação de Sistema Integrado de Gestão da ISO 9001, ISO 14001 e OHSAS 18001</li>
-<li>Gerenciamento de resíduos e recuperação energética</li>
-<li>Prevenção e controle da poluição em instalações náuticas</li>
-
-                </ul>
-                </div>
-                </div>
-            </div>
-            
-            <div id="corporateGovernanceFloater" class="floater">
-            	<div id="corporateGovernanceIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/cap.png" alt=""/></div>
-                <div id="corporateGovernanceTextContainer" class="weDoTextContainer">
-                <div id="corporateGovernanceTitle" class="floaterTitle"> Governança Corporativa<?php //echo_static_text("planningTitle") ?></div>
-                <div id="corporateGovernanceText"><?php //echo_static_text("planningText") ?>
-                <ul>
-                	<li>Administração e Gestão terceirizados</li>
-                
-<li>Auditorias de 1ª e 2ª partes</li>
-<li>Compliance, Conformidade legal, Combate à Corrupção</li>
-<li>Desenvolvimento Sustentável</li>
-<li>Due Diligence</li>
-<li>Marketing de Relacionamento</li>
-<li>Planejamento Estratégico</li>
-                </ul>
-                </div>
-                </div>
-            </div>
-            
-            <div id="trainingFloater" class="floater">
-            	<div id="trainingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/knot.png" alt=""/></div>
-                <div id="trainingTextContainer" class="weDoTextContainer">
-                <div id="trainingTitle" class="floaterTitle"> Formação, Capacitação e Treinamento<?php //echo_static_text("planningTitle") ?></div>
-                <div id="trainingText"><?php //echo_static_text("planningText") ?>
-                <ul>
-<li>Análise de riscos ambientais e operacionais</li> 
-<li>  Análise de riscos e combate a corrupção</li> 
-<li>  Atendimento a emergências ambientais: brigadas de incêndio; combate a fogo embarcado (segmentonáutico), primeiros socorros; sobrevivência no mar</li> 
-<li>  Boas práticas de operação e manejo em estruturas náuticas</li> 
-<li>  Excelência no atendimento</li> 
-<li>  Formação de auditores internos</li> 
-<li>  Identificação de riscos ambientais, de segurança e saúde ocupacional;</li> 
-<li>  Identificação de riscos de corrupção e ações de prevenção;</li> 
-<li>  Planos de emergência</li> 
-<li>  Prevenção e combate a riscos operacionais (incêndios e avarias)</li> 
-<li>  Identificação de avaliação da legislação aplicável</li> 
-<li>  Formação e treinamento para obtenção de habilitação para arrais amadores</li> 
-<li>  Atendimento aos requisitos legais da Marinha do Brasil na prestação de serviços terceirizados</li> 
-<li>  Treinamento para uso racional de recursos em embarcações: água e energia</li>
-
-                </ul>
-                </div>
-                </div>
-            </div>
-            
-            <div id="reportsFloater" class="floater">
-            	<div id="reportsIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/helm.png" alt=""/></div>
-                <div id="reportsTextContainer" class="weDoTextContainer">
-                <div id="reportsTitle" class="floaterTitle"> Laudos<?php //echo_static_text("planningTitle") ?></div>
-                <div id="reportsText"><?php //echo_static_text("planningText") ?>
-                <ul>
-<li> Engenharia construtiva</li> 
-<li>  Químicos e ambientais</li> 
-<li>  Programa de Prevenção a Riscos Ambientais – PPRA</li> 
-<li>  Análises de segurança e saúde ocupacional</li> 
-
-                </ul>
                 </div>
                 </div>
             </div>
@@ -156,17 +81,44 @@ include_once ("include/lang_detect.php");
             <div id="sustainabilityFloater" class="floater">
             	<div id="sustainabilityIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/lighthouse.png" alt=""/></div>
                 <div id="sustainabilityTextContainer" class="weDoTextContainer">
-                <div id="sustainabilityTitle" class="floaterTitle">Sustentabilidade e Responsabilidade social<?php //echo_static_text("planningTitle") ?></div>
-                <div id="sustainabilityText"><?php //echo_static_text("planningText") ?>
-                <ul>
-<li>o Criação de indicadores de desempenho</li> 
-<li>Relatórios de sustentabilidade</li> 
-<li>Desenvolvimento Sustentável – implantação de programas</li> 
-
-                </ul>
+                <div id="sustainabilityTitle" class="floaterTitle"><?php echo_static_text("sustainabilityTitle") ?></div>
+                <div id="sustainabilityText"><?php echo_static_text("sustainabilityText") ?>
+               
                 </div>
                 </div>
             </div>
+            
+            <div id="corporateGovernanceFloater" class="floater">
+            	<div id="corporateGovernanceIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/cap.png" alt=""/></div>
+                <div id="corporateGovernanceTextContainer" class="weDoTextContainer">
+                <div id="corporateGovernanceTitle" class="floaterTitle"> <?php echo_static_text("corporateGovernanceTitle") ?></div>
+                <div id="corporateGovernanceText"><?php echo_static_text("corporateGovernanceText") ?>
+               
+                </div>
+                </div>
+            </div>
+            
+            <div id="trainingFloater" class="floater">
+            	<div id="trainingIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/knot.png" alt=""/></div>
+                <div id="trainingTextContainer" class="weDoTextContainer">
+                <div id="trainingTitle" class="floaterTitle"><?php echo_static_text("trainingTitle") ?></div>
+                <div id="trainingText"><?php echo_static_text("trainingText") ?>
+                
+                </div>
+                </div>
+            </div>
+            
+            <div id="reportsFloater" class="floater">
+            	<div id="reportsIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/helm.png" alt=""/></div>
+                <div id="reportsTextContainer" class="weDoTextContainer">
+                <div id="reportsTitle" class="floaterTitle"><?php echo_static_text("reportsTitle") ?></div>
+                <div id="reportsText"><?php echo_static_text("reportsText") ?>
+                
+                </div>
+                </div>
+            </div>
+            
+            
         </div>
 	</div>
 </div>
@@ -174,7 +126,7 @@ include_once ("include/lang_detect.php");
 <div id="whoWeAre" class="container">
 	<div id="whoWeAreContentContainer" class="contentContainer">
     	<div id="whoWeAreTitle" class="titlePart"><?php echo_static_text("whoWeAreTitle") ?></div>
-        <div id="whoWeAreText">Constituída por profissionais qualificados e bem sucedidos em suas áreas de atuação, com formação acadêmica compatível e alinhada com a cultura organizacional, a Bem a Bordo atua com ética e transparência, gerando uma relação de confiança com o cliente. Atua para transformar e desenvolver as pessoas e organizações através de capacitação, treinamento e qualificação para o desenvolvimento de competências. Desenvolve soluções integradas em formação corporativa, capacitação técnica e treinamento específico. Através de consultoria empresarial oferece metodologias para disseminar conhecimentos, práticas, tecnologias e inovações para consolidação da busca pela melhoria contínua dos produtos e serviços de seus clientes.  Assim como a Bem a Bordo, a equipe privilegia a ética, a excelência, a qualidade, o respeito, o comprometimento e o profissionalismo em suas relações.</div>
+        <div id="whoWeAreText"><?php echo_static_text("whoWeAreText") ?></div>
         	<div id="whoWeAreFloatersContainer">
         		<?php if(function_exists('BABP_getPeople')){
 					BABP_getPeople($lang);

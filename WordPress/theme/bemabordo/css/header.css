@@ -2,10 +2,11 @@
 html, body{
   height:100%;
   margin:auto;
+  line-height: 200%;
 }
 #content{
 	position:absolute;
-	top:114px;
+	top:143px;
 	width: 100%;	
 }
 #headerContainer{
@@ -47,10 +48,11 @@ html, body{
 }
 #menuContainer{
 	float:right;
+	margin-bottom:10px;
 }
 .menu{
 	font-family: 'Libre Franklin', sans-serif;
-	font-size:0.96em;
+	font-size:0.8em;
 	color:#0085a6;
 }
 #menuContainer span{
@@ -59,6 +61,13 @@ html, body{
 }
 #menuContainer span:last-of-type{
 	margin-right:0px;	/* same as socialContainer*/
+}
+#menuContainer span.menuItem a,#menuContainer span:last-of-type a{
+	text-decoration:none;
+	color:#0085a6;
+}
+span.menuItem{
+
 }
 #hamburgerMenuIcon{
 	position: absolute;
@@ -113,8 +122,6 @@ html, body{
 @media only screen and (max-width: 950px) {
 	#menuContainer{
 		visibility:hidden;
-		width:10px;
-		height:20px;
 		overflow:hidden;	
 	}
 	#hamburgerMenuIcon{
@@ -128,7 +135,7 @@ html, body{
 	#languageContainer img,#socialContainer img {
 		margin-left: 5px;
 	}
-	#logoContainer img{
+	#logoContainer a img{
 		max-width:150px;
 		width:auto;
 		height:auto;	

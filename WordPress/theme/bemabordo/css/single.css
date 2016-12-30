@@ -1,0 +1,46 @@
+/* CSS Document */
+#content.single{
+	text-align:center;
+	font-family: 'Libre Franklin', sans-serif;
+}
+#postContainer{
+	width:50%;
+	text-align:left;
+	display:inline-block;
+}
+.newsTitle a{
+	font-size:2em;
+	text-decoration:none;
+	color:blue;
+	font-family: 'Libre Franklin', sans-serif;
+}
+#allNewsLink{
+	text-align:center;
+}
+#buttonContainer{
+	overflow: hidden;
+}
+#buttonContainer:after{
+    clear: both;
+    content: "";
+    display: block;
+}
+.newsButton{
+		background-color:#00a5ce;
+	color:#ffffff;
+	width: 15em;
+	text-align:center;
+	font-weight:bold;
+	border-radius:5px;
+}
+.newsButton a{
+	text-decoration:none;
+	color:rgba(255,255,255,1.00);
+	text-transform:uppercase;
+}
+.newsButton.prev{
+	float:left;
+}
+.newsButton.next{
+	float:right;
+}

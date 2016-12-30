@@ -18,3 +18,18 @@
 	display:inline-block;
 	width:75%;
 }
+.thumbnail{
+	height:220px;
+}
+.dateNews{
+	font-size:0.8em;
+}
+.newsTitle a{
+	text-decoration:none;
+	font-weight:bold;
+	color:blue;
+}
+.newsText{
+	font-size:0.9em;
+	color:rgba(77,76,76,1.00);
+}

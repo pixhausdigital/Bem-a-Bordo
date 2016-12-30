@@ -39,7 +39,7 @@ body{
 	
 }
 .owl-item .carouselImageContainer .imageOverlay{
-	background-color:rgba(255,255,255,0.71);
+	background-color:rgba(212,231,230,0.71);
 }
 .owl-item .carouselImageContainer .imageText div{
 	visibility: hidden;
@@ -98,7 +98,8 @@ body{
 	padding-top:20px;
 }
 #aboutUsText{
-	text-align:left;
+	text-align:center;
+	color:rgba(0,43,64,1.00);
 }
 .contentContainer{
 	display:inline-block;
@@ -143,7 +144,7 @@ body{
 }
 #valuesText{
 	position:absolute;
-	bottom:60px;
+	bottom:50px;
 	 left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -191,6 +192,7 @@ body{
     height: 115px;
     min-width: 100px;
     min-height: 100px;
+	width: 20%;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -214,6 +216,7 @@ body{
 }
 #whoWeAreText{
 	color:#808080;
+	    margin-bottom: 20px;
 }
 #whoWeAreFloatersContainer{
 	text-align:center;
@@ -226,7 +229,7 @@ body{
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-right: 15px;
+    margin-right: 20px;
 	vertical-align:top;
 	text-align:left;
 	vertical-align:top;
@@ -259,6 +262,7 @@ body{
 .personDescription{
 	margin-top:12px;
 	max-width:510px;
+	color:#808080;
 }
 
 #news.container{
@@ -271,8 +275,21 @@ body{
 	text-align:left;
 	font-family: 'Libre Franklin', sans-serif;	
 }
+.thumbnail{
+	height:220px;
+}
+.dateNews{
+	font-size:0.8em;
+}
+.newsTitle a{
+	text-decoration:none;
+	font-weight:bold;
+	color:blue;
+}
 .newsText{
-	margin-top:20px;
+	margin-top: 20px;
+	font-size:0.9em;
+	color:rgba(77,76,76,1.00);
 }
 #allNewsLink{
 	margin:30px;
@@ -383,27 +400,8 @@ padding-right: 0em;
 		max-width:400px;
 	}
 }
-@media only screen and (max-width: 1130px) {
-	.personDescription{
-		max-width:400px;
-	}
-}
-@media only screen and (max-width: 1070px) {
-	.carouselImageContainer img{
-		max-width:600px;
-		 width: auto;
-  		height: auto;
-	}
-	.carouselImageContainer .imageText{
-		font-size: 1em;	
-	}
-	#home{
-		height:auto;
-	}
-	.contentContainer{
-		width:100%;
-	}
-	#missionContentContainer{
+@media only screen and (max-width: 1200px) {
+#missionContentContainer{
 		
 	}
 	#missionTextContainer{
@@ -427,6 +425,28 @@ padding-right: 0em;
 		margin-right:10px;
 		color:#004c7a;
 	}
+}
+@media only screen and (max-width: 1130px) {
+	.personDescription{
+		max-width:400px;
+	}
+}
+@media only screen and (max-width: 1070px) {
+	.carouselImageContainer img{
+		max-width:600px;
+		 width: auto;
+  		height: auto;
+	}
+	.carouselImageContainer .imageText{
+		font-size: 1em;	
+	}
+	#home{
+		height:auto;
+	}
+	.contentContainer{
+		width:100%;
+	}
+	
 }
 @media only screen and (max-width: 900px) {
 /**

@@ -2,6 +2,7 @@
 function bab_toplevel_page() {
 	echo "page";
 	global $wpdb;
+	$containerArray=array();
 	$table_name = $wpdb->prefix . 'BAB_StaticText';
 	$results = $wpdb->get_results( 'SELECT * FROM '.$table_name." ORDER BY `".$table_name."`.`container` ASC",ARRAY_A );
 	 if ( $_SERVER["REQUEST_METHOD"] == "POST" ){
@@ -26,6 +27,18 @@ function bab_toplevel_page() {
 	echo'<form method="post" action="'.$_SERVER['REQUEST_URI'].'" enctype="multipart/form-data">';
 	foreach($results as $text){
 		//return ($text["text_".$lang]);
+		if(!in_array($text["container"],$containerArray)){
+			$containerArray[]=$text["container"];
+			$containerNameArray=explode("_", $text["container"]);
+			$containerName=$containerNameArray[1];
+			?>
+            <div id="<?php echo $containerName; ?>container">
+            	<?php
+					get_template_part( 'include/pageParts/part', $containerName );
+				?>
+            </div>
+            <?php
+		}
 		?>
         <label for="<?php echo $text["id"] ?>"><?php echo $text["id"] ?></label><input type="text" name="<?php echo $text["id"]."[text_pt]" ?>" value="<?php echo $text["text_pt"] ?>"><input type="text" name="<?php echo $text["id"]."[text_en]" ?>" value="<?php echo $text["text_en"] ?>"> <br>
         <?php
