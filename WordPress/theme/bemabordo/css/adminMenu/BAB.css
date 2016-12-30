@@ -1,0 +1,32 @@
+/* CSS Document */
+
+#menucontainer{
+	    margin: 30px;
+}
+#missioncontainer{
+	width:900px;
+	background-image:url(../../image/mission.jpg);
+	background-repeat:no-repeat;
+    background-position: top center !important;
+	height:770px;
+	font-family: 'Libre Franklin', sans-serif;
+}
+.contentContainer {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.input{
+	background-color:white;
+	    border-radius: 5px;
+    border-color: transparent;
+    padding: 1em;
+	width: 90%;
+    display: block;
+}
+#submitButton{
+	    border-radius: 5px;
+    border-color: transparent;
+    padding: 1em;
+	vertical-align: text-bottom;
+}

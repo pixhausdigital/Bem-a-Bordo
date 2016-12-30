@@ -105,7 +105,7 @@ $wpdb->insert(
 		'id' => "welcome", 
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Ética, respeito, integridade, justiça e responsabilidade."), 
-		'container' => "2_home",
+		'container' => "2_carousel",
 		'textClass' => "simple"
 	) 
 );
@@ -128,7 +128,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Bem a Bordo – Gestão de Negócios Sustentáveis foi criada para centralizar o trabalho voluntário, informal e de caráter profissional, que vinha sendo realizado por seus fundadores. Sua atuação está na prestação de serviços de gestão operacional e administrativa; gestão ambiental; nas engenharias; na formação, capacitação e treinamento técnicos, inclusive para o segmento náutico. Realiza auditorias, elabora projetos e assessora na implantação de sistemas de gestão para certificações internacionais e de responsabilidade social.  Sediada em São Paulo e representada no Rio de Janeiro, atua em todo o território nacional através de parcerias, com criatividade, inovação e permanente atualização para criar soluções personalizadas e competitivas para seus clientes."), 
 		'container' => "3_aboutUs",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -150,7 +150,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Superar expectativas, encantar, realizar e entregar com qualidade, profissionalismo e ética as soluções e os serviços a que se propõe; surpreender o cliente na conquista de resultados efetivos; inspirar pessoas e organizações a conquistar parcerias duradoras e negócios confiáveis."), 
 		'container' => "4_mission",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );$wpdb->insert( 
 	$table_name, 
@@ -171,7 +171,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Ser uma empresa bem-sucedida, de alta eficiência e de reconhecida excelência na resolução dos desafios apresentados pelo cliente em tornar seus negócios lucrativos e sustentáveis, contribuindo assim, para a construção de uma sociedade mais ética, justa e sustentável."), 
 		'container' => "4_mission",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );$wpdb->insert( 
 	$table_name, 
@@ -181,7 +181,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Valores"), 
 		'container' => "4_mission",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -192,7 +192,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Acreditar na lisura dos negócios, na qualidade das relações, na colaboração mútua, na inovação, no compartilhar, na responsabilidade e no cumprimento do dever para com as gerações futuras, praticando sustentabilidade."), 
 		'container' => "4_mission",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -241,7 +241,7 @@ $wpdb->insert(
 
                 </ul>"), 
 		'container' => "5_whatWeDo",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -272,7 +272,7 @@ $wpdb->insert(
 <li>Planejamento Estratégico</li>
                 </ul>"), 
 		'container' => "5_whatWeDo",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -310,7 +310,7 @@ $wpdb->insert(
 
                 </ul>"), 
 		'container' => "5_whatWeDo",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -338,7 +338,7 @@ $wpdb->insert(
 
                 </ul>"), 
 		'container' => "5_whatWeDo",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 
@@ -365,7 +365,7 @@ $wpdb->insert(
 
                 </ul>"), 
 		'container' => "5_whatWeDo",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 /**
@@ -510,7 +510,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Constituída por profissionais qualificados e bem sucedidos em suas áreas de atuação, com formação acadêmica compatível e alinhada com a cultura organizacional, a Bem a Bordo atua com ética e transparência, gerando uma relação de confiança com o cliente. Atua para transformar e desenvolver as pessoas e organizações através de capacitação, treinamento e qualificação para o desenvolvimento de competências. Desenvolve soluções integradas em formação corporativa, capacitação técnica e treinamento específico. Através de consultoria empresarial oferece metodologias para disseminar conhecimentos, práticas, tecnologias e inovações para consolidação da busca pela melhoria contínua dos produtos e serviços de seus clientes.  Assim como a Bem a Bordo, a equipe privilegia a ética, a excelência, a qualidade, o respeito, o comprometimento e o profissionalismo em suas relações."), 
 		'container' => "5_whoWeAre",
-		'textClass' => "simple"
+		'textClass' => "rich"
 	) 
 );
 $wpdb->insert( 

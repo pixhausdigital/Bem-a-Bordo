@@ -25,6 +25,12 @@ function bab_toplevel_page() {
 		}
 	 }
 	echo'<form method="post" action="'.$_SERVER['REQUEST_URI'].'" enctype="multipart/form-data">';
+	?>
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/header.css">
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/front-page.css">
+     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/adminMenu/BAB.css">
+    <?php
+	$settings = array( 'media_buttons' => false, 'teeny' => true, 'wpautop' => true );
 	foreach($results as $text){
 		//return ($text["text_".$lang]);
 		if(!in_array($text["container"],$containerArray)){
@@ -34,14 +40,20 @@ function bab_toplevel_page() {
 			?>
             <div id="<?php echo $containerName; ?>container">
             	<?php
+					global $lang;
+					$lang="pt";
 					get_template_part( 'include/pageParts/part', $containerName );
 				?>
             </div>
             <?php
 		}
+		if($text["textClass"]=="simple"){
 		?>
         <label for="<?php echo $text["id"] ?>"><?php echo $text["id"] ?></label><input type="text" name="<?php echo $text["id"]."[text_pt]" ?>" value="<?php echo $text["text_pt"] ?>"><input type="text" name="<?php echo $text["id"]."[text_en]" ?>" value="<?php echo $text["text_en"] ?>"> <br>
-        <?php
+        <?php } else{
+				wp_editor( $text["text_pt"], $text["id"]."_text_pt", $settings );
+				wp_editor( $text["text_en"], $text["id"]."_text_en", $settings );
+		}
 	}
 	echo'<button type="submit" name="save">Save</button>';
 	echo "</form>";
