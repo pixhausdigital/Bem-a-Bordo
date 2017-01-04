@@ -7,7 +7,7 @@
 if(!is_admin()){
 $newsWithImages=array();
 $newsNoImages=array();
-
+global $lang;
 $args = array( 'posts_per_page' => 3 );
 
 $myposts = get_posts( $args );

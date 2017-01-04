@@ -59,6 +59,7 @@ function BAB_setup_options () {
 	add_option ( 'BAB_Carousel_img_1', NULL );
 	add_option ( 'BAB_Carousel_img_2', NULL );
 	add_option ( 'BAB_Carousel_img_3', NULL );
+	add_option ( 'BAB_Carousel_img_4', NULL );
 	
 	BAB_install_data();
 	BABP_install_data();
