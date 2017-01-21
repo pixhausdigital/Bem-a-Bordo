@@ -44,7 +44,7 @@
             </div>
             
             <div id="reportsFloater" class="floater">
-            	<div id="reportsIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/helm.png" alt=""/></div>
+            	<div id="reportsIcon" class="floaterIcon"><img src="<?php bloginfo('template_directory');?>/image/ship.png" alt=""/></div>
                 <div id="reportsTextContainer" class="weDoTextContainer">
                 <div id="reportsTitle" class="floaterTitle"><?php echo_static_text("reportsTitle") ?></div>
                 <div id="reportsText"><?php echo_static_text("reportsText") ?>

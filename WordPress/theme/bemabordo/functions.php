@@ -1,5 +1,15 @@
 <?php
-include_once ("include/lang_detect.php");
+//include_once ("include/lang_detect.php");
+global $lang;
+ if(function_exists('pll_current_language')) {
+	//var_dump(pll_current_language());
+	$lang=pll_current_language();
+ }else{
+	if(!isset($_GET["lang"])){
+		$_GET["lang"] = "pt";
+	}
+	$lang=$_GET["lang"];
+ }
 add_theme_support( 'post-thumbnails' ); 
 
 add_action('after_switch_theme', 'BAB_setup_options');
@@ -17,12 +27,13 @@ function BAB_setup_options () {
 
 	$sql = "CREATE TABLE $table_name (
 		`id` varchar(90) NOT NULL,
+		`subID` mediumint(9) NOT NULL AUTO_INCREMENT,
   		`text_en` text NOT NULL,
   		`text_pt` text NOT NULL,
   		`time` datetime NOT NULL,
   		`container` varchar(90) NOT NULL,
 		`textClass` varchar(90) NOT NULL,
-		PRIMARY KEY  (id)
+		PRIMARY KEY  (subID)
 	) $charset_collate;";
 	
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );

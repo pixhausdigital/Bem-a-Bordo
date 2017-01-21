@@ -10,3 +10,6 @@ global $lang;
 	$lang=$_GET["lang"];
  }
 ?>
+<script type="application/javascript">
+	var langCurrent="<?php echo  $lang?>";
+</script>

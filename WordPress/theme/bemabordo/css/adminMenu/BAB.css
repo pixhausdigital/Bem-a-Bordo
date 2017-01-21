@@ -1,7 +1,13 @@
 /* CSS Document */
 
-#menucontainer{
+#headerContainer{
 	    margin: 30px;
+		position:relative;
+		top:auto;
+		
+}
+.centerContainer{
+	height:auto;	
 }
 #missioncontainer{
 	width:900px;
@@ -14,7 +20,7 @@
 .contentContainer {
     display: inline-block;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .input{
 	background-color:white;
@@ -29,4 +35,25 @@
     border-color: transparent;
     padding: 1em;
 	vertical-align: text-bottom;
+}
+.carouselImageContainer{
+	display:inline-block;	
+}
+.richEditor {
+    width:49%;
+	display:inline-block; !important
+}
+/**
+.richEditor .html-active{
+	/*top: -435px;
+}
+.wp-editor-wrap{
+
+}
+**/
+.wpfooter{
+	display:none;
+}
+.imageOverlay{
+	display:none;
 }

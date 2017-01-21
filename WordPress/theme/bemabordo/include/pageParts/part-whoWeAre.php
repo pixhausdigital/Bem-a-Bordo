@@ -1,7 +1,7 @@
 <?php global $lang; ?>
 <div id="whoWeAreContentContainer" class="contentContainer">
-<div id="whoWeAreTitle" class="titlePart"><?php echo_static_text("whoWeAreTitle") ?></div>
-        <div id="whoWeAreText"><?php echo_static_text("whoWeAreText") ?></div>
+<div id="whoWeAreTitle" class="titlePart staticTextPart"  data-static="whoWeAreTitle"><?php echo_static_text("whoWeAreTitle") ?></div>
+        <div id="whoWeAreText" class="staticTextPart" data-static="whoWeAreText"><?php echo_static_text("whoWeAreText") ?></div>
         
     	
         	<div id="whoWeAreFloatersContainer">

@@ -4,31 +4,52 @@ function bab_toplevel_page() {
 	global $wpdb;
 	$containerArray=array();
 	$table_name = $wpdb->prefix . 'BAB_StaticText';
-	$results = $wpdb->get_results( 'SELECT * FROM '.$table_name." ORDER BY `".$table_name."`.`container` ASC",ARRAY_A );
+	
 	 if ( $_SERVER["REQUEST_METHOD"] == "POST" ){
 		//var_dump($_POST);
 		foreach($_POST as $id => $text){
 			if($id !== "save"){
-			$wpdb->update( 
-					$table_name, 
-					array(
+				if( strpos($id, '_text') !== false){
+					$splitArr=(explode("_",$id));
+					$nameId=$splitArr[0];
+					$$nameId[$splitArr[1]."_".$splitArr[2]]=$text;
+					if(count($$nameId)>1){
+						$response[$nameId]=	$$nameId;
+					}
+				}else{
+					$response[$id]=	array(
 						'text_pt' => $text["text_pt"],
 						'text_en' => $text["text_en"]
-					), array( 
-						'id' => $id
-					)
-				);
+					);
+				}
+			/** **/
 			}
 			else{
 			//var_dump($id);
 			}
 		}
+		foreach($response as $id => $text){
+			
+			$wpdb->update( 
+					$table_name, 
+					array(
+						'text_pt' => htmlentities($text["text_pt"]),
+						'text_en' => htmlentities($text["text_en"])
+					), array( 
+						'id' => $id
+					)
+				);
+		}
+		//var_dump($response);
 	 }
+	 $results = $wpdb->get_results( 'SELECT * FROM '.$table_name." ORDER BY `".$table_name."`.`container` ASC, `subID` ASC",ARRAY_A );
 	echo'<form method="post" action="'.$_SERVER['REQUEST_URI'].'" enctype="multipart/form-data">';
 	?>
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/header.css">
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/front-page.css">
      <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/adminMenu/BAB.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	 <script src="<?php bloginfo('template_directory');?>/js/adminMenu/static.js"></script>
     <?php
 	$settings = array( 'media_buttons' => false, 'teeny' => true, 'wpautop' => true );
 	foreach($results as $text){
@@ -51,17 +72,20 @@ function bab_toplevel_page() {
 		?>
         <label for="<?php echo $text["id"] ?>"><?php echo $text["id"] ?></label><input type="text" name="<?php echo $text["id"]."[text_pt]" ?>" value="<?php echo $text["text_pt"] ?>"><input type="text" name="<?php echo $text["id"]."[text_en]" ?>" value="<?php echo $text["text_en"] ?>"> <br>
         <?php } else{
-				wp_editor( $text["text_pt"], $text["id"]."_text_pt", $settings );
-				wp_editor( $text["text_en"], $text["id"]."_text_en", $settings );
+			?>
+			<label for="<?php echo $text["id"] ?>"><?php echo $text["id"] ?></label><br>
+            <span class="richEditor">
+			<?php
+				wp_editor( html_entity_decode($text["text_pt"]), $text["id"]."_text_pt", $settings );?>
+                </span><span class="richEditor">
+                <?php
+				wp_editor( html_entity_decode($text["text_en"]), $text["id"]."_text_en", $settings );?>
+				</span>
+                <?php
 		}
 	}
 	echo'<button type="submit" name="save">Save</button>';
 	echo "</form>";
-	$content = '';
-$editor_id = 'mycustomeditor';
-$settings = array( 'media_buttons' => false, 'teeny' => true, 'wpautop' => true );
-
-wp_editor( $content, $editor_id, $settings );
 }
 
 

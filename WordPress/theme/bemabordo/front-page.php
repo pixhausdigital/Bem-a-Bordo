@@ -3,7 +3,6 @@ include_once ("include/lang_detect.php");
 global $lang;
 ?>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/front-page.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/js/assets/owl.carousel.css">
 <script src="<?php bloginfo('template_directory');?>/js/owl.carousel.js"></script>
 <script src="<?php bloginfo('template_directory');?>/js/front-page.js"></script>
@@ -22,7 +21,6 @@ global $lang;
 
 <div id="mission" class="container">
 	<?php get_template_part( 'include/pageParts/part', "mission" ); ?>
-</div>
 </div>
 
 <div id="whatWeDo" class="container">

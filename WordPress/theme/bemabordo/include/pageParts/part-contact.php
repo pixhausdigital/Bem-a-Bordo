@@ -1,8 +1,8 @@
 <div id="contactContentContainer" class="contentContainer">
-    	<div id="contactTitle" class="titlePart"><?php echo_static_text("contactTitle") ?></div>
+    	<div id="contactTitle" class="titlePart staticTextPart"data-static="contactTitle"><?php echo_static_text("contactTitle") ?></div>
         
-        <div id="contactSubTitle" ><?php echo_static_text("contact_subtitle"); ?></div>
-<div id="contactInformation" ><?php echo_static_text("contact_information"); ?></div>
+        <div id="contactSubTitle" class="staticTextPart" data-static="contactSubTitle"><?php echo_static_text("contact_subtitle"); ?></div>
+<div id="contactInformation" class="staticTextPart" data-static="contactInformation"><?php echo_static_text("contact_information"); ?></div>
 <div id="contactForm">
 <?php if(!is_admin()){ ?>
 <form method="post" id="mailForm">
@@ -41,20 +41,20 @@
 <div id="messageContainer">
 <div id="formFields">
 <span class="field">
-<span class="input" ><?php echo_static_text("contact_form_namePlaceholder"); ?></span>
+<span class="input staticTextPart" data-static="contact_form_namePlaceholder" ><?php echo_static_text("contact_form_namePlaceholder"); ?></span>
 </span>
 <span class="field">
-<span class="input" ><?php echo_static_text("contact_form_emailPlaceholder"); ?></span>
+<span class="input staticTextPart" data-static="contact_form_emailPlaceholder" ><?php echo_static_text("contact_form_emailPlaceholder"); ?></span>
 </span>
 <span class="field">
-<span class="input" ><?php echo_static_text("contact_form_subjectPlaceholder"); ?></span>
+<span class="input staticTextPart" data-static="contact_form_subjectPlaceholder" ><?php echo_static_text("contact_form_subjectPlaceholder"); ?></span>
 </span>
 </div>
 <div id="message">
-<span class="input" ><?php echo_static_text("contact_form_messagePlaceholder"); ?></span>
+<span class="input staticTextPart" data-static="contact_form_messagePlaceholder" ><?php echo_static_text("contact_form_messagePlaceholder"); ?></span>
 </div>
 <div id="formLastLine">
-<span id="submitButton" ><?php echo_static_text("contact_form_submitButton"); ?></span>
+<span id="submitButton" class="staticTextPart" data-static="contact_form_submitButton"><?php echo_static_text("contact_form_submitButton"); ?></span>
 <span class="clear"></span>
 </div>
 </div>
@@ -62,6 +62,6 @@
 
 
 <?php } ?>
-<div id="contactInfoForm"><?php echo_static_text("contact_form_information"); ?></div>
+<div id="contactInfoForm" class="staticTextPart" data-static="contact_form_information"><?php echo_static_text("contact_form_information"); ?></div>
 </div>
 </div>

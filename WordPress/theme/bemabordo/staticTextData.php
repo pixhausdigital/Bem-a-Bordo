@@ -6,7 +6,7 @@ $wpdb->insert(
 		'id' => "homeMenu", 
 		'text_en' => htmlentities ("Home"), 
 		'text_pt' => htmlentities ("Início"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -17,7 +17,7 @@ $wpdb->insert(
 		'id' => "aboutUsMenu", 
 		'text_en' => htmlentities ("About Us"), 
 		'text_pt' => htmlentities ("Sobre nós"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -28,7 +28,7 @@ $wpdb->insert(
 		'id' => "missionMenu", 
 		'text_en' => htmlentities ("Our Mission"), 
 		'text_pt' => htmlentities ("Nossa Missão"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -39,7 +39,7 @@ $wpdb->insert(
 		'id' => "whoWeAreMenu", 
 		'text_en' => htmlentities ("Who We Are"), 
 		'text_pt' => htmlentities ("Quem Somos"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -50,7 +50,7 @@ $wpdb->insert(
 		'id' => "whatWeDoMenu", 
 		'text_en' => htmlentities ("What We Do"), 
 		'text_pt' => htmlentities ("O que fazemos"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -61,7 +61,7 @@ $wpdb->insert(
 		'id' => "newsMenu", 
 		'text_en' => htmlentities ("News"), 
 		'text_pt' => htmlentities ("Atualidades"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -72,7 +72,7 @@ $wpdb->insert(
 		'id' => "contactMenu", 
 		'text_en' => htmlentities ("Contact Us"), 
 		'text_pt' => htmlentities ("Contato"), 
-		'container' => "1_menu",
+		'container' => "1_header",
 		'textClass' => "simple"
 	) 
 );
@@ -102,13 +102,65 @@ $wpdb->insert(
 	$table_name, 
 	array( 
 		'time' => current_time( 'mysql' ), 
-		'id' => "welcome", 
+		'id' => "car0", 
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Ética, respeito, integridade, justiça e responsabilidade."), 
 		'container' => "2_carousel",
 		'textClass' => "simple"
 	) 
 );
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "car1", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities (" A <b>Bem a Bordo – Gestão de Negócios Sustentáveis </b>
+surgiu do compromisso com a ética e com os preceitos de sustentabilidade; da responsabilidade para com as gerações futuras; da qualidade dos relacionamentos e da excelência nos negócios."), 
+		'container' => "2_carousel",
+		'textClass' => "rich"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "car2", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("A <b>Bem a Bordo – Gestão de Negócios Sustentáveis </b>
+é uma empresa jovem com ideal maduro, que reúne conhecimento, experiência, inovação e ousadia para fazer diferente."), 
+		'container' => "2_carousel",
+		'textClass' => "rich"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "car3a", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("Contribuir na construção de uma sociedade
+mais <b>ética</b>, <b>justa</b> e <b>sustentável</b> "), 
+		'container' => "2_carousel",
+		'textClass' => "rich"
+	) 
+);
+$wpdb->insert( 
+	$table_name, 
+	array( 
+		'time' => current_time( 'mysql' ), 
+		'id' => "car3b", 
+		'text_en' => htmlentities (""), 
+		'text_pt' => htmlentities ("como geradora de <b>prosperidade</b>, 
+praticando os princípios e valores adotados."), 
+		'container' => "2_carousel",
+		'textClass' => "rich"
+	) 
+);
+
+
+
+
 $wpdb->insert( 
 	$table_name, 
 	array( 
@@ -181,7 +233,7 @@ $wpdb->insert(
 		'text_en' => htmlentities (""), 
 		'text_pt' => htmlentities ("Valores"), 
 		'container' => "4_mission",
-		'textClass' => "rich"
+		'textClass' => "simple"
 	) 
 );
 $wpdb->insert( 

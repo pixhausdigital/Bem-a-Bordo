@@ -12,10 +12,11 @@
 }
 */
 body{
-	font-family: 'Libre Franklin', sans-serif;	
+	font-family: 'Libre Franklin', sans-serif;
+	font-size:1em;
 }
 #newsContentContainer,#missionContentContainer{
-	line-height:normal;
+	
 }
 .carouselImageContainer{
 	position:relative;
@@ -54,7 +55,19 @@ body{
 	background-color:transparent;
 }
 
-
+.car0{
+	position:absolute;
+	bottom: 20%;	
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size:1.30em;
+	color:#002b40;
+	font-weight:bold;
+	font-style:normal;
+}
 .car1{
 	position:absolute;
     top: 10%;
@@ -132,19 +145,7 @@ position:absolute;
 	font-size:1.70em;
 	margin-top:20px;
 }
-.welcome{
-	position:absolute;
-	bottom: 20%;	
-	left:0;
-	right:0;
-	margin-left:auto;
-	margin-right:auto;
-	font-family: 'Libre Franklin', sans-serif;
-	font-size:1.30em;
-	color:#002b40;
-	font-weight:bold;
-	font-style:normal;
-}
+
 
 .container{
 	text-align:center;
@@ -159,6 +160,8 @@ position:absolute;
 #aboutUsText{
 	text-align:center;
 	color:rgba(0,43,64,1.00);
+	font-size: 0.9em;
+	    line-height: 150%;
 }
 .contentContainer{
 	display:inline-block;
@@ -183,6 +186,7 @@ position:absolute;
 	width:100%;
 	height:100%;
 	position:relative;
+	    font-size: 0.9em;
 }
 #missionTitle{
 	/*color:rgba(255,255,255,1.00);	*/
@@ -214,14 +218,17 @@ position:absolute;
 }
 #whatWeDo.container{
 	background-color:rgba(255,255,255,0.78);
-	
+	    padding-top: 20px;
 	min-height:870px;
+	    padding-bottom: 20px;
 }
 #whatWeDoTitle{
 	color:#004c7a;
 }
 #whatWeDoFloatersContainer{
 	/*max-width */
+	    margin-top: 50px;
+		font-size: 0.8em;
 }
 .floater{
     /*max-width: 300px;
@@ -241,7 +248,8 @@ position:absolute;
 	    width: 70%;
 }
 .floaterTitle{
-	font-size:20px;
+	 font-size: 1.5em;
+	/**font-size:20px; **/
 	font-weight:bold;
 	margin-top:15px;
 	color:#004c7a;
@@ -258,17 +266,18 @@ position:absolute;
 }
 .floaterIcon img{
 	position: relative;
-    top: -29px;
-    left: -10px;
+top: -23px;
+    left: 50px;
+
 }
 #trainingIcon.floaterIcon img{
-    top: -5px;	
 }
 #whoWeAre.container{
 	background-color:#e6e8e1;
 	font-family: 'Libre Franklin', sans-serif;
 	padding-bottom:40px;
 	padding-top:20px;
+	    font-size: 0.9em;
 }
 #whoWeAreTitle{
 	color:#666666;
@@ -284,11 +293,11 @@ position:absolute;
 .person{
     display: inline-block;
     max-width: 510px;
-	width:47%;
+	width:45%;
     position: relative;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-right: 20px;
+    margin-right: 30px;
 	vertical-align:top;
 	text-align:left;
 	vertical-align:top;
@@ -301,10 +310,13 @@ position:absolute;
 
 .personText{
 	display: inline-block;
-    max-width: 320px;
-	width:30%;
+    max-width: 300px;
+	width:65%;
 }
-
+.personSocialContainer{
+	    padding-bottom: 10px;
+    display: block;	
+}
 .personSocialContainer a{
 	margin:5px;
 }
@@ -313,7 +325,8 @@ position:absolute;
 }
 /**/
 .personName{
-	font-size:22px;	
+	font-size:18px;
+	font-weight:bold;
 }
 .personJob{
 	font-size:12px;
@@ -325,7 +338,8 @@ position:absolute;
 }
 
 #news.container{
-	background-color:#ffffff;	
+	background-color:#ffffff;
+	    padding-top: 20px;	
 }
 .newsFloaterContainer{
     max-width: 330px;
@@ -334,6 +348,9 @@ position:absolute;
     vertical-align: top;
 	text-align:left;
 	font-family: 'Libre Franklin', sans-serif;	
+}
+#imageNewsContainer{
+	margin-top:40px;
 }
 .thumbnail{
 	height:220px;
@@ -344,7 +361,7 @@ position:absolute;
 .newsTitle a{
 	text-decoration:none;
 	font-weight:bold;
-	color:blue;
+	color:darkblue;
 }
 .newsText{
 	margin-top: 20px;
@@ -360,6 +377,8 @@ position:absolute;
 	text-align:center;
 	color:#002b40;
 	padding-bottom:1em;
+	padding-top: 20px;
+
 }
 #contactSubTitle{
 	font-size:1.2em;

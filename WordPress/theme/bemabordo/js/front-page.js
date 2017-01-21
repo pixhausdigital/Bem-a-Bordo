@@ -18,6 +18,7 @@ jQuery( document ).ready( function( $ ) {
     	margin:0,
 		autoWidth:true,
 		autoplay:true,
+		autoplaySpeed:1000,
 		autoplayHoverPause: false,
 	});
 	 $(".menuItem").click(function(){
